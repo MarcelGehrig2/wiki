@@ -1,0 +1,3 @@
+$(info $$var is [${var}])
+
+http://stackoverflow.com/questions/16467718/how-to-print-out-a-variable-in-makefile

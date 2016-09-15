@@ -1,0 +1,8 @@
+cd ~/.ssh
+ssh-keygen -t dsa            (nur einmal für alle schlüssel notwendig)
+ssh-copy-id -i ./id_dsa.pub user@server
+
+
+
+LINK:      https://www.simplylinux.ch/ssh-login-ohne-passwort-key-based#codesyntax_1
+ARCH:      http://web.archive.org/web/20160331152458/https://www.simplylinux.ch/ssh-login-ohne-passwort-key-based

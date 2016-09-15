@@ -1,0 +1,5 @@
+ssh-keygen -R es107                              http://wiki.ntb.ch/infoportal/software/linux/emdebian/zoom?s
+
+
+ssh-keygen -R 146.136.36.53                    http://superuser.com/questions/421004/how-to-fix-warning-about-ecdsa-host-key            
+

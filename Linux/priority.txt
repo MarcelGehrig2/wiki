@@ -1,0 +1,1 @@
+awk '{print "Name: "$2,"  Prio: "$18,"   Nice: "$19}' /proc/755/stat

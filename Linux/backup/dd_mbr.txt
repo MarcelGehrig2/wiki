@@ -1,0 +1,4 @@
+blkid       # shows disks and partitions
+lsblk       # disk infos (use -o)
+lsblk -d -o name,rota     # 1 HDD; 0 SSD
+
