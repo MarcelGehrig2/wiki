@@ -1,0 +1,12 @@
+# http://stackoverflow.com/questions/4359681/want-to-change-my-master-to-an-older-commit-how-can-i-do-this
+
+
+# 1.) change master on Github aswell
+git push -f origin $old_commit_id:master
+
+# 2.) only local
+git checkout master~1            # Checkout previous commit on master
+git checkout -b new_master       # Create branch for new master
+git branch -D master             # Delete old master
+git branch -mv new_master master # Make new_master master
+
