@@ -15,7 +15,7 @@ const int *p1 = &i;     // data is const (const is befor int), but pointer is no
 p1++;                   // ok
 
 
-int* const p2;          // pointer is cons (const is befor pointer p2), but data is not
+int* const p2;          // pointer is const (const is befor pointer p2), but data is not
 *p2 == 5;               // ok
 p2++;                   // compile error
 
