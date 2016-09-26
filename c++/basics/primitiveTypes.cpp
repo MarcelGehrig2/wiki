@@ -9,7 +9,7 @@
 int i = 010;
 std::cout << i << std::endl;    //8
 
-75         // int
+75         // int   // sizeof(int 75) >= 2 bytes
 75u        // unsigned int
 75l        // long
 75ul       // unsigned long 

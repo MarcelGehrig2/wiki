@@ -99,3 +99,23 @@ void add25ByReference (int &i) {
 //void add25ByReference (int& i) {      // identical
     i = i + 25;
 }
+
+
+
+// ////////////////////////////////////////////////////////////////////////////
+
+// example: return by reference
+#include <iostream>
+using namespace std;
+int n;
+int& test();
+
+int main() {
+    test() = 5;
+    cout<<n;
+    return 0;
+}
+
+int& test() {
+    return n;
+}
