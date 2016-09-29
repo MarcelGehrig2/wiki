@@ -112,3 +112,21 @@ int main () {
 
     return 0;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// variadic class template (multiple data types)
+// http://en.cppreference.com/w/cpp/language/parameter_pack
+
+// Definition:
+template<class ... Types> struct Tuple {};
+Tuple<> t0;           // Types contains no arguments
+Tuple<int> t1;        // Types contains one argument: int
+Tuple<int, float> t2; // Types contains two arguments: int and float
+Tuple<0> error;       // error: 0 is not a type
+
+//call
+template<class ... Types> void f(Types ... args);
+f();       // OK: args contains no arguments
+f(1);      // OK: args contains one argument: int
+f(2, 1.0); // OK: args contains two arguments: int and double

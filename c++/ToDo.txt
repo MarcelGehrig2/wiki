@@ -1,0 +1,6 @@
+std::atomic Testprog
+https://www.youtube.com/watch?v=O88AyNmFscs
+
+Programmidee: "Lernkarten" mit dateien im wiki.
+
+move sematics:	http://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html

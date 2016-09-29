@@ -1,3 +1,5 @@
 
 
 grep -rnw '/path/to/somewhere/' -e "pattern"
+
+grep " install " /var/log/dpkg.log	#last installed packages
