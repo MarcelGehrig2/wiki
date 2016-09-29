@@ -1,0 +1,39 @@
+Neue Eclipse Version auf Server bereit stellen
+// ///////////////////////////////////////////
+
+* I:\eclipse
+* http://wiki.ntb.ch/infoportal/software/eclipse/start
+
+
+Wichtig:
+// /////
+Die Rechte der verschiedenen Benutzer und Benutzergruppen müssen richtig vergeben sein
+
+
+Vorgehen:
+/////////
+1.) Rechte für eigenen Benutzer
+2.) config.org.ini aktivieren
+3.) änderungen vornehmen
+4.) Nach updates suchen (Nur für Deep und BDI)
+5.) config.ntb.ini aktivieren
+6.) Rechte Vererbung für alle 3 Unterordner und Ordner "eclipse" brechen: sicherheit > erweitert
+6.) Rechte zurücksetzen
+
+
+eclipse-C
+/////////
+* WinAVR als Plug-In und bereits auf ntb-PC
+* JRE und MinGW bereits auf ntb-PC (Kiosk) installiert
+
+
+Rechte:
+///////
+Alle:			3 Haken: Read & execute, List folder contents, Read
+inf-adm:		4 Haken: zusätzlich "Special permissions" (Rechte vergeben)
+Administrators:		Full control
+
+
+Sonstiges
+/////////
+* M:\workspace
