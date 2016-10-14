@@ -1,0 +1,8 @@
+
+
+# file durchsuchen
+less filename | grep wort
+
+# folder with files and folders
+ls -al | grep wort
+

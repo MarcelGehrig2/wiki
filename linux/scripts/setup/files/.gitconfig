@@ -1,0 +1,16 @@
+[alias]
+	l = log --graph --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ai%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
+	la = log --graph --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ai%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
+	lr = log --graph --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ar%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
+	lra = log --graph --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ar%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
+	ld = log --oneline --decorate --graph
+	lda = log --oneline --decorate --graph --all
+	ll = log --graph --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ar%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
+
+	s = status -sb
+	
+[color]
+	ui = true
+
+[push]
+	default = simple

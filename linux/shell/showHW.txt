@@ -1,0 +1,10 @@
+# http://www.binarytides.com/linux-commands-hardware-info/
+
+
+inxi -Fx
+
+
+
+
+
+

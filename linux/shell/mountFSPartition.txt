@@ -1,0 +1,20 @@
+
+# show partitions
+lsblk;
+ mount | column -t
+
+# shows free space on disk
+sf -H
+
+
+# remount root "/" as read-write
+mount -o remount rw /
+
+# unmount mountpoint
+umount /media/mgehrig2/0403-0201/
+
+
+
+
+# partition tool
+sudo cfdisk /dev/sdb

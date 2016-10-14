@@ -1,0 +1,19 @@
+# http://stackoverflow.com/questions/1072125/how-does-piping-work-in-linux 
+
+#If you want to redirect the output of one program into the input of another, just use a simple pipeline:
+program1 arg arg | program2 arg arg
+
+#If you want to save the output of program1 into a file and pipe it into program2, you can use tee(1):
+program1 arg arg | tee output-file | program2 arg arg
+
+
+
+#Piping does not complete the first command before running the second. Unix (and Linux) piping run all commands concurrently. A command will be suspended if
+    #It is starved for input.
+    #It has produced significantly more output than its successor is ready to consume.
+
+#For most programs output is buffered, which means that the OS accumulates a substantial amount of output (perhaps 8000 characters or so) before passing it on to the next stage of the pipeline. This buffering is used to avoid too much switching back and forth between processes and kernel.
+
+#If you want output on a pipeline to be sent right away, you can use unbuffered I/O, which in C means calling something like fflush() to be sure that any buffered output is immediately sent on to the next process. Unbuffered input is also possible but is generally unnecessary because a process that is starved for input typically does not wait for a full buffer but will process any input you can get.
+
+#For typical applications unbuffered output is not recommended; you generally get the best performance with the defaults. In your case, however, where you want to do dynamic graphing immediately the first process has the info available, you definitely want to be using unbuffered output. If you're using C, calling fflush(stdout) whenever you want output sent will be sufficient.

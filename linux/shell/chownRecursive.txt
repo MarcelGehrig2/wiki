@@ -1,0 +1,3 @@
+# http://askubuntu.com/questions/6723/change-folder-permissions-and-ownership 
+
+sudo chown -R mgehrig2:mgehrig2 ./*

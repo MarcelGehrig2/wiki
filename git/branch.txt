@@ -1,0 +1,7 @@
+
+
+# create new branch
+git checkout -b <branch-name>
+
+# delete branch
+git branch -d <branch-name>
