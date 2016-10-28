@@ -30,3 +30,7 @@ sudo apt-get install subversion     # SVN
 
 # collection of programs for creating graphs; need by buildroot for "make graph-depends"
 sudo apt-get install graphviz 
+
+# colordiff
+sudo apt-get install colordiff
+

@@ -1,6 +1,7 @@
 cd ~/.ssh
 ssh-keygen -t dsa            (nur einmal für alle schlüssel notwendig)
-ssh-copy-id -i ./id_dsa.pub user@server
+
+ssh-copy-id -i ~/.ssh/id_dsa.pub user@server
 
 
 

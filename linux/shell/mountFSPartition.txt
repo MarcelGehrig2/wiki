@@ -2,6 +2,8 @@
 # show partitions
 lsblk;
  mount | column -t
+fdisk -l
+
 
 # shows free space on disk
 sf -H
