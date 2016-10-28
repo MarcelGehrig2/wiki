@@ -29,3 +29,4 @@ alias ln='ln -i'
 
 # git
 alias gitc='git s; git add --all; git commit -m "commit"; git s'   #quick commit
+alias gitp='git s; git add --all; git commit -m "commit"; git s; git push'    #quick commit and push
