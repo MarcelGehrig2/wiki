@@ -9,8 +9,8 @@ alias ll='ls -lah'
 alias l.='ls -d .* --color=auto'
 
 alias ..='cd ..' 
-alias ...='cd ../../../' 
-alias ....='cd ../../../../' 
+alias ...='cd ../../'  
+alias ....='cd ../../../' 
 alias .....='cd ../../../../' 
 alias .4='cd ../../../../' 
 alias .5='cd ../../../../..'
@@ -29,4 +29,10 @@ alias ln='ln -i'
 
 # git
 alias gitc='git s; git add --all; git commit -m "commit"; git s'   #quick commit
-alias gitp='git s; git add --all; git commit -m "commit"; git s; git push'    #quick commit and push
+alias gitp='gitc; git s; git push'    #quick commit and push
+
+# myEnv
+alias myEnvArm='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/envArm.sh'
+
+# myEnv alias
+alias myEnvBuildroot='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/buildroot.sh'

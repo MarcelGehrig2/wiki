@@ -1,0 +1,9 @@
+export ARCH=powerpc
+#export CROSS_COMPILE=powerpc-linux-gnu-
+#export CROSS_COMPILE=~/output/host/usr/powerpc-buildroot-linux-uclibc/bin/powerpc-buildroot-linux-uclibc-gcc-
+#export CROSS_COMPILE=~/output/host/usr/bin/powerpc-buildroot-linux-uclibc-gcc
+export CROSS_COMPILE=~/output/host/usr/bin/powerpc-buildroot-linux-uclibc-
+#export CROSS_COMPILE=~/output/host/usr/share/buildroot/toolchainfile.cmake
+#export CROSS_COMPILE=powerpc-buildroot-linux-uclibc-
+export KERNELDIR=~/git_repos/linux
+export INSTALL_MOD_PATH=~/modules
