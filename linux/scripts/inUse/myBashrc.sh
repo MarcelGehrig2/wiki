@@ -28,7 +28,7 @@ alias cp='cp -i'
 alias ln='ln -i'
 
 # git
-alias gitc='git s; git add --all; git commit -m "commit"; git s'   #quick commit
+alias gitc='git s; git add --all; echo "git commit"; git commit -m "commit"; git s'   #quick commit
 alias gitp='gitc; git s; git push'    #quick commit and push
 
 # myEnv
