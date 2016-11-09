@@ -1,0 +1,15 @@
+
+
+//Neues wiki erstellen
+[[tonefitbelt:start | ToneFit Belt (geplant)]]      //:start
+
+
+//Rechte verwalten
+1. http://wiki.ntb.ch/projects/
+2. Zugangsverwaltung
+3. Gewünschte seite auswählen
+4. Entsprechender Benutzer auswählen    (Externe: siehe externeNutzer.txt)
+5. "entfernen" beinhaltet alle anderen rechte
+6. für Externe: [Wurzel] -> Leserechte geben (sonst können sie die Projektseite nicht anschauen)
+
+

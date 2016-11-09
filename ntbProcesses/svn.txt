@@ -1,0 +1,24 @@
+
+\\snv-server\SVN
+- inf
+- projects
+- public
+- stud
+- sysp
+
+// neues Repo
+* Ornder "myProject" erstellen
+* in ordner "myProject": Rechtsklick -> TortoiseSvn -> Create repository here
+
+// rechte verwalten
+* svn_access.txt
+[groups]
+movingChair = graf, visentin, nielsen, mgehrig2, kalberer, slandis, pgasser
+
+[movingChair:/]
+mgehrig2 = r            //Benutzer (auch externe)
+@movingChair = rw       //Gruppe
+
+SVN Update Script:
+http://wiki.ntb.ch/inf/server/svn-server/start  //ganz unten
+https://svn.ntb.ch/cgi/update.cmd               //direkte addresse
