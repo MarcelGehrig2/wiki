@@ -29,7 +29,7 @@ alias ln='ln -i'
 
 # git
 alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "commit"; git s'   #quick commit
-alias gitp='gitc; git s; git push'    #quick commit and push
+alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
 
 # myEnv
 alias myEnvArm='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/envArm.sh'
