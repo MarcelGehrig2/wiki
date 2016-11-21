@@ -1,0 +1,11 @@
+
+
+
+https://github.com/ntb-ch/pathos/tree/master/imx6
+
+https://svn.ntb.ch/projects/pathos/03_Artworks/Panels/Electronics/TestManual/TestManualControllerBoard.docx 
+
+
+
+// buildroot
+https://github.com/ntb-ch/buildroot

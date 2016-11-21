@@ -12,8 +12,11 @@ $script_dir/toolchains.sh
 $script_dir/tools.sh
 $script_dir/git.sh
 $script_dir/multimedia.sh
+$script_dir/dict.sh
+$script_dir/latex.sh
 
 
 sudo apt-get update
+
 
 
