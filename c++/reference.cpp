@@ -105,17 +105,35 @@ void add25ByReference (int &i) {
 // ////////////////////////////////////////////////////////////////////////////
 
 // example: return by reference
-#include <iostream>
-using namespace std;
+#include <iostream> 
+#include <string>
+
 int n;
 int& test();
 
 int main() {
-    test() = 5;
-    cout<<n;
+    int intA = test();		// NOT A REFERENCE
+	intA = 5;
+    std::cout << "n:    " << n << std::endl;
+	std::cout << "intA: " << intA << std::endl << std::endl;
+	
+    int& intB = test();		// Reference, works like inteded
+	intB = 5;
+    std::cout << "n:    " << n << std::endl;
+	std::cout << "intB: " << intB << std::endl << std::endl;
     return 0;
 }
 
 int& test() {
     return n;
 }
+
+// output:
+
+// n:    0
+// intA: 5
+//
+// n:    5
+// intB: 5
+
+

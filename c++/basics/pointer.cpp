@@ -40,3 +40,13 @@ p = &value
 &p: 0x7fff688821f8
 p:  0x7fff688821f4
 */
+
+
+//function with pointer
+void add25ByPointer (int *i) {
+//void add25ByPointer (int* i) {        // identical
+    *i = *i + 25;
+}
+
+//function call
+add25ByPointer(&i);
