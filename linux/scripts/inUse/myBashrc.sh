@@ -36,3 +36,11 @@ alias myEnvArm='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/envArm.sh'
 
 # myEnv alias
 alias myEnvBuildroot='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/buildroot.sh'
+
+
+# text editor
+alias gedit='xed'
+
+
+# restart synergy client
+#alias sync=
