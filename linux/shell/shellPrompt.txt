@@ -1,0 +1,8 @@
+
+// original
+${debian_chroot:+($debian_chroot)}\u@\h \w \$
+
+
+// set green current working dir
+PS1="\e[0;32m[\w]\$ \e[m "
+

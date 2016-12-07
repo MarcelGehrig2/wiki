@@ -1,0 +1,13 @@
+# http://askubuntu.com/questions/19901/how-to-make-a-disk-image-and-restore-from-it-later
+
+#backup
+dd if=/dev/sda8 of=./part1.image
+
+#restore
+dd if=./part1.image of=/dev/hda1
+
+
+
+
+#helpfull stuff
+lsblk

@@ -1,5 +1,6 @@
 #!/bin/bash
 
-#called from "/etc/rc.local"
+script="$(readlink -f $0)"
+script_dir="$(dirname $script)"
 
-./startSynergy.sh
+#called from "/etc/rc.local"

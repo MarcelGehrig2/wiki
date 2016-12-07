@@ -32,10 +32,10 @@ alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "comm
 alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
 
 # myEnv
-alias myEnvArm='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/envArm.sh'
+alias myEnvArm='. ~/wiki/linux/scripts/inUse/myEnv/envArm.sh'
 
 # myEnv alias
-alias myEnvBuildroot='. /home/mgehrig2/wiki/linux/scripts/inUse/myEnv/buildroot.sh'
+alias myEnvBuildroot='. ~/wiki/linux/scripts/inUse/myEnv/buildroot.sh'
 
 
 # text editor
@@ -44,3 +44,11 @@ alias gedit='xed'
 
 # restart synergy client
 #alias sync=
+
+
+# set prompt
+PS1="\e[0;32m[\W]\$ \e[m "
+
+
+# EtherCat
+alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'

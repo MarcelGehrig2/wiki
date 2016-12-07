@@ -1,0 +1,10 @@
+// http://unix.stackexchange.com/questions/86072/installed-software-back-up
+
+
+# backup
+dpkg -l | grep ^ii | awk '{print $2}' > mypackages.txt
+
+
+# restore
+pkgs=$(cat mypackages.txt)
+sudo apt-get install --no-download --show-upgraded $pkgs
