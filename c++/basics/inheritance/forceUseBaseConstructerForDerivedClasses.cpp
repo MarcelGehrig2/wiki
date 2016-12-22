@@ -4,6 +4,9 @@
 class Base
 {
 public:
+//	Base() {}		//with this empty base constructer, 
+//						the derived classes are not forced to call the constructor Base(std::string Text)
+
     Base(std::string Text) {    //derived classes are forced to call this base constructor
 		std::cout << "Base constructor " << Text << std::endl;
     }

@@ -47,7 +47,8 @@ alias gedit='xed'
 
 
 # set prompt
-PS1="\e[0;32m[\W]\$ \e[m "
+#PS1="\e[0;32m[\W]\$ \e[m "
+PS1='\[\e[1;32m\]\W $ \[\e[0m\]'
 
 
 # EtherCat
