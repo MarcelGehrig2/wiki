@@ -1,0 +1,37 @@
+
+
+
+# miscellaneous
+# #############
+set(EC_DEMO_DC "/home/mgehrig2/projects/020_EtherCAT/EC-Master-ClassA-AddOn-V2.9")
+list(APPEND ADDITIONAL_INCLUDE_DIRS "${EC_DEMO_DC}/Examples/EcMasterDemoDc")	# https://cmake.org/cmake/help/v3.0/command/list.html
+
+include_directories(${ADDITIONAL_INCLUDE_DIRS})
+link_directories(${ADDITIONAL_LINK_DIRS})
+
+
+# add_executable
+# ##############
+add_executable(eeduro-delta ${DELTA_SRCS})
+# all .cpp used to create executable 'eeduro-delta'
+
+add_executable(testappeerosethercat
+	main.cpp
+	
+	control/controlSystem/TestAppCS.cpp
+	control/safetySystem/TestAppSafetyProperties.cpp
+)
+
+
+# add libraries
+# ##############
+target_link_libraries(myecmasterdemodc AtemRasSrv EcMaster pthread dl rt)
+#target_link_libraries(<target> [item1 [item2 [...]]]
+#                      [[debug|optimized|general] <item>] ...)
+# The named <target> must have been created in the current directory by a command such as add_executable() or add_library().
+
+
+
+
+
+
