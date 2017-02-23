@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=~/wiki/linux/scripts/inUse/startup.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_US]=startupScriptCustom
+Comment[en_US]=
+X-GNOME-Autostart-Delay=1
+Name[en_GB]=My Startup Script

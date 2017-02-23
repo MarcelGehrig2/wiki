@@ -34,3 +34,11 @@ sudo apt-get -y install graphviz
 # colordiff
 sudo apt-get -y install colordiff
 
+# virtualbox
+sudo apt-get -y install virtualbox virtualbox-qt virtualbox-dkms
+
+#terminator
+sudo apt-get -y install terminator
+mkdir -p ~/.config/terminator
+cp -p $script_dir/files/configTerminator ~/.config/terminator/config
+

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+script="$(readlink -f $0)"
+script_dir="$(dirname $script)"
+
+
 # alias
 # #####
 
@@ -42,9 +46,6 @@ alias myEnvBuildroot='. ~/wiki/linux/scripts/inUse/myEnv/buildroot.sh'
 alias gedit='xed'
 
 
-# restart synergy client
-#alias sync=
-
 
 # set prompt
 #PS1="\e[0;32m[\W]\$ \e[m "
@@ -53,3 +54,8 @@ PS1='\[\e[1;32m\]\W $ \[\e[0m\]'
 
 # EtherCat
 alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'
+
+
+# ROS
+source /home/mgehrig2/wiki/linux/scripts/inUse/ROS.sh
+

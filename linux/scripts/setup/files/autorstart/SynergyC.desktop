@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=~/wiki/linux/scripts/inUse/startSynergy.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_GB]=SynergyC
+Comment[en_GB]=
+X-GNOME-Autostart-Delay=2
