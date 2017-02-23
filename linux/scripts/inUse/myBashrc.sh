@@ -57,5 +57,5 @@ alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'
 
 
 # ROS
-source /home/mgehrig2/wiki/linux/scripts/inUse/ROS.sh
+source ~/wiki/linux/scripts/inUse/ROS.sh
 
