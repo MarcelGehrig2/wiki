@@ -4,8 +4,8 @@
 # stream to chromecast
 sudo add-apt-repository ppa:qos/pulseaudio-dlna
 sudo apt-get update
-sudo apt-get install pulseaudio-dlna
-sudo apt-get install pavucontrol        # sound level control for each application
+sudo apt-get -y install pulseaudio-dlna
+sudo apt-get -y install pavucontrol        # sound level control for each application
 # equalizer
 #sudo add-apt-repository ppa:alex-wv/pulseaudio-equalizer-ppa
 #sudo apt -get update
@@ -23,4 +23,4 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 # 3. Update list of available packages
 sudo apt-get update
 # 4. Install Spotify
-sudo apt-get install spotify-client
+sudo apt-get -y install spotify-client

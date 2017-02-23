@@ -1,0 +1,16 @@
+
+
+declaration		introduces an identifier and describes its type. (stuff in .hpp)
+			everything a compiler needs
+definition		the implementation (stuff in .cpp)
+			can be used in addition or instead of a declaration
+default constructor
+forward declaration
+operator		() rund; [] eckig; {} geschweift; spitz[]
+
+
+identifier		name der variable / funktion
+
+dereferenzieren		Objekt hinter Pointer
+
+dangeling pointer
