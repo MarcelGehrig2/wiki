@@ -42,3 +42,5 @@ sudo apt-get -y install terminator
 mkdir -p ~/.config/terminator
 cp -p $script_dir/files/configTerminator ~/.config/terminator/config
 
+# virtualbox
+sudo apt-get install virtualbox virtualbox-qt virtualbox-dkms 
