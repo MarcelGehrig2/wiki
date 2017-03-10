@@ -1,4 +1,5 @@
 #!/bin/bash
+# sourced by ~/.bashrc.sh
 
 script="$(readlink -f $0)"
 script_dir="$(dirname $script)"

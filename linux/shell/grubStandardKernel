@@ -1,0 +1,12 @@
+# http://askubuntu.com/questions/216398/set-older-kernel-as-default-grub-entry
+
+
+
+# backup
+sudo cp /etc/default/grub /etc/default/grub.b
+
+
+# edit
+sudo xed /etc/default/grub
+
+GRUB_DEFAULT="Advanced options for Linux Mint 18 Cinnamon 64-bit>Linux Mint 18 Cinnamon 64-bit, with Linux 4.4.0-rt3+"
