@@ -1,3 +1,5 @@
+#marcel-linux-laptop:1::5902
+
 #x11vnc -rfbauth ~/.vnc/passwd -noxdamage
 
 #x11vnc -noshm -scale 7/10 -many -background

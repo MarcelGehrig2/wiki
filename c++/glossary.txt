@@ -8,6 +8,7 @@ default constructor
 forward declaration
 operator		() rund; [] eckig; {} geschweift; spitz[]
 
+parameter		Funktionsparameter (Übergabewert)
 
 identifier		name der variable / funktion
 
