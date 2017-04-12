@@ -14,6 +14,7 @@ $script_dir/git.sh
 $script_dir/multimedia.sh
 $script_dir/dict.sh
 $script_dir/latex.sh
+$script_dir/ros.sh
 
 #add myBashrc.sh to home/.bashrc
 echo ". ~/wiki/linux/scripts/inUse/myBashrc.sh" >> ~/.bashrc

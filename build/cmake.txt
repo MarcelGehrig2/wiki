@@ -34,4 +34,11 @@ target_link_libraries(myecmasterdemodc AtemRasSrv EcMaster pthread dl rt)
 
 
 
+include_directories(${ADDITIONAL_INCLUDE_DIRS})
+link_directories(${ADDITIONAL_LINK_DIRS})
+
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include/)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include/SDK)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include/SDK/Linux)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 

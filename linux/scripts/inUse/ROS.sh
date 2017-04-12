@@ -4,6 +4,7 @@
 script="$(readlink -f $0)"
 script_dir="$(dirname $script)"
 
+alias sshturtle='ssh kobuki@146.136.59.23'
 
 source /opt/ros/kinetic/setup.bash
 

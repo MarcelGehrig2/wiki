@@ -1,0 +1,14 @@
+#https://www.youtube.com/watch?v=0IQlpFWTFbM
+
+#show syscalls
+strace programmname
+
+#L1 cach misses
+perf
+
+#tracing kernel functions
+ftrace
+
+
+ls /proc/11848/exe
+cat /proc/11848/exe > file recovered

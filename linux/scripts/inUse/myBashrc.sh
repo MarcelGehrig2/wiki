@@ -67,4 +67,5 @@ alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'
 
 # ROS
 source ~/wiki/linux/scripts/inUse/ROS.sh
+alias sshturtle='ssh kobuki@146.136.59.23'
 

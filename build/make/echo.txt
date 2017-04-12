@@ -1,3 +1,25 @@
+
+
+# http://stackoverflow.com/questions/9298278/cmake-print-out-all-accessible-variables-in-a-script
+
+message(STATUS "The CMAKE_CURRENT_BINARY_DIR is: ${CMAKE_CURRENT_BINARY_DIR}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(info $$var is [${var}])
 
 http://stackoverflow.com/questions/16467718/how-to-print-out-a-variable-in-makefile
