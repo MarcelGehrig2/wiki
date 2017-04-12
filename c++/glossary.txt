@@ -1,9 +1,10 @@
-
+﻿
 
 declaration		introduces an identifier and describes its type. (stuff in .hpp)
 			everything a compiler needs
 definition		the implementation (stuff in .cpp)
 			can be used in addition or instead of a declaration
+body			code part of a function/constructor
 default constructor
 forward declaration
 operator		() rund; [] eckig; {} geschweift; spitz[]
