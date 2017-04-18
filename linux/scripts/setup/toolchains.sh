@@ -5,9 +5,9 @@ script_dir="$(dirname $script)"
 
 # http://wiki.ntb.ch/infoportal/software/linux/ubuntu/crosstoolchain/start 
 
-# CMake
+#
 sudo apt-get -y install cmake
-
+sudo apt-get -y install build-essential
 sudo apt-get -y install libcomedi-dev libcomedi0
 
 
