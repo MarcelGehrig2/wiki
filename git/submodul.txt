@@ -1,0 +1,13 @@
+# existing repo
+git submodule add https://github.com/chaconinc/DbConnector folderName
+
+
+
+# clone (up to 8 repos parallel)
+git clone --recursive -j8 https://github.com/MarcelGehrig2/VT2.git
+
+
+
+
+#
+git status

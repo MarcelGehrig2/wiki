@@ -10,6 +10,10 @@ sudo apt-get -y install texlive-fonts-recommended
 sudo apt-get -y install texlive-lang-german
 sudo apt-get -y install texlive-latex-recommended
 sudo apt-get -y install texlive-pictures
-sudo apt-get -y install texlive-generic-extra
+#sudo apt-get -y install texlive-generic-extra
 
 sudo apt-get -y install texmaker
+
+#packages:
+sudo apt-get -y install texlive-latex-extra
+sudo apt-get -y install texlive-latex-extra-doc

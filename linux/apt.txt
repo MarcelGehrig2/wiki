@@ -1,0 +1,4 @@
+
+
+# unable-to-correct-problems-you-have-held-broken-packages
+sudo aptitude install <packagename>

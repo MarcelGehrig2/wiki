@@ -8,3 +8,4 @@ alias sshturtle='ssh kobuki@146.136.59.23'
 
 source /opt/ros/kinetic/setup.bash
 
+rosparam set enable_statistics true

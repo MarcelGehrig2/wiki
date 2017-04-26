@@ -7,6 +7,7 @@ script_dir="$(dirname $script)"
 sudo apt-get -y install htop
 sudo apt-get -y install tree
 sudo apt-get -y install putty
+sudo apt-get -y install pv      # progress bar for pipe
 
 
 #VNC
@@ -23,7 +24,8 @@ sudo apt-get -y install openssh-server openssh-client
 
 
 # synergy
-sudo apt-get -y install synergy
+#sudo apt-get -y install synergy
+#use installer from synergy https://symless.com/synergy   otherwise encryption does not work
 
 # snv
 sudo apt-get -y install subversion     # SVN

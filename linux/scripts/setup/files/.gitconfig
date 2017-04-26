@@ -8,9 +8,20 @@
 	ll = log --graph --all --pretty=format:'%C(yellow)%h%C(reset) %C(green)%ar%C(reset)%C(red)%d%C(reset) %s %C(green)%an%C(reset)'
 
 	s = status -sb
+    co = checkout
+    br = branch
+    ci = commit
+	unstage = reset HEAD --
+    last = log -1 HEAD
+    
+    apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0r git rm --cached
+    
 	
 [color]
 	ui = true
 
 [push]
 	default = simple
+[user]
+	name = MarcelGehrig
+	email = marcel.gehrig@ntb.ch
