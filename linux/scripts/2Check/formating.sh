@@ -1,0 +1,51 @@
+#!/bin/bash
+
+script="$(readlink -f $0)"
+script_dir="$(dirname $script)"
+
+
+
+
+
+#!/bin/sh
+LNP_PATH=$(readlink -f "$0" 2>/dev/null || readlink "$0" 2>/dev/null)
+LNP_PATH="${LNP_PATH:-$0}"
+LNP_DIR=$(dirname "$LNP_PATH")
+cd "${LNP_DIR}"
+exename=$(basename "$0")
+t_bold="$(tput bold 2>/dev/null || printf '\033[1m')"
+t_red="$(tput setaf 1 2>/dev/null || printf '\033[0;32m')"
+t_reset="$(tput sgr 0 2>/dev/null || printf '\033[0m')"
+warn() {
+    echo "$t_red""$t_bold""[WARNING]""$t_reset" "$exename:" "$*"
+}
+
+if [ -f ../.git/index ]; then
+    warn "You are attempting to run the LNP from a git repository."
+    cat <<EOF
+The Lazy-Newb-Pack-Linux repository does not include all necessary files.
+Download a complete LNP package from:
+    - https://github.com/Lazy-Newb-Pack/Lazy-Newb-Pack-Linux/releases
+    - http://lazynewbpack.com/linux/
+EOF
+fi
+
+if [ ! -d df_linux ]; then
+    warn "df_linux/ not found (working directory incorrect?)"
+    echo "working directory: $(pwd)"
+fi
+
+if [ -x /sbin/getcap ] && [ -x /sbin/setcap ]; then
+    #Check whether Dwarf Therapist can read from DF memory:
+    dt_capabilities=$(/sbin/getcap LNP/utilities/dwarf_therapist/DwarfTherapist |cut -f2 -d"="|tr -d " ")
+    dt_capabilities=${dt_capabilities:=0}
+    if [ ${dt_capabilities} != "cap_sys_ptrace+eip" ]; then
+        msg="Enable Dwarf Therapist to read from Dwarf Fortress memory"
+        xterm -e "echo $msg;sudo /sbin/setcap cap_sys_ptrace=eip LNP/utilities/dwarf_therapist/DwarfTherapist"
+    fi
+else
+    warn "Could not find /sbin/getcap and/or /sbin/setcap"
+fi
+
+#run Lazy Newb Pack
+./PyLNP || warn "Failed to start PyLNP"

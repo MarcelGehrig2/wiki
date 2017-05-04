@@ -1,0 +1,18 @@
+# CMakeList.txt
+# #############
+
+#set variable TESTVAR
+add_definitions(-DTESTVAR)
+
+
+
+# .cpp
+# ####
+
+#ifdef TESTVAR
+	std::cout << "TESTVAR is defined" << std::endl;
+#endif
+	
+#ifndef TESTVAR
+	std::cout << "TESTVAR is not defined" << std::endl;
+#endif
