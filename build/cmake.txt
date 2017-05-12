@@ -1,3 +1,19 @@
+# https://cmake.org/Wiki/CMake_Useful_Variables
+
+
+# variables
+# #########
+CMAKE_CURRENT_SOURCE_DIR    #this is the directory where the currently processed CMakeLists.txt is located in
+CMAKE_SOURCE_DIR            # this is the directory which contains the top-level CMakeLists.txt, i.e. the top level source directory 
+PROJECT_SOURCE_DIR          # contains the full path to the root of your project source directory, i.e. to the nearest directory where CMakeLists.txt contains the PROJECT() command 
+
+# lists
+# #####
+list(APPEND ADDITIONAL_INCLUDE_DIRS "${EC_DEMO_DC}/Examples/EcMasterDemoDc")
+
+
+
+$ENV{name}      # This is not an environment variable , but this is how you can access environment variables from cmake files. It returns the content of the environment variable with the given name (e.g. $ENV{PROGRAMFILES}) 
 
 
 

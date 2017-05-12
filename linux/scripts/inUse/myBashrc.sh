@@ -8,9 +8,9 @@ script_dir="$(dirname $script)"
 # #####
 
 ## Colorize the ls output ##
-alias ls='ls --color=auto'
+alias ls='ls --color=always'
 alias ll='ls -lah' 
-alias l.='ls -d .* --color=auto'
+alias l.='ls -d .* --color=always'
 
 alias ..='cd ..' 
 alias ...='cd ../../'  
@@ -27,6 +27,10 @@ alias diff='colordiff'
 alias tree='tree -C'
 
 alias mount='mount |column -t' 
+
+alias make='make -j4'
+
+alias grep='grep --color=auto'
 
 # confirmation #
 alias mv='mv -i' 

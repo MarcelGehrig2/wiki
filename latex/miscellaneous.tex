@@ -1,0 +1,42 @@
+
+
+
+\chapter{Feature List}
+\section{Fernsteuerung}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[angle=0,height=5cm]{images/BeagleBoneBlack.jpg}
+\caption{Originaler BeagleBone Black}
+\label{fig:BeagleBoneBlack}
+\end{figure}
+
+
+\begin{itemize}
+%\begin{itemize}
+\item WLAN: Kabelloses Internet via Wireless LAN
+\item GSM: Kabelloses Internet über das mobile Internet
+\end{itemize}
+
+
+\footnote{Quelle: Datenblatt WL1835MOD Seite 11}
+
+
+\textit{main.cpp:}\
+\begin{lstlisting}
+#include "sequences/MainSequence.hpp"
+
+...
+
+eeros::sequencer::Sequencer S;
+
+...
+\end{lstlisting}
+
+
+\texttt{Code segment für inline} 
+
+
+\usepackage{units}
+\unit[0.1]{s}
