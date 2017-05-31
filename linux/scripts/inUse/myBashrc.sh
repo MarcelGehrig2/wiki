@@ -32,6 +32,8 @@ alias make='make -j4'
 
 alias grep='grep --color=auto'
 
+alias restartNetwork='sudo service network-manager restart'
+
 # confirmation #
 alias mv='mv -i' 
 alias cp='cp -i' 
@@ -68,3 +70,4 @@ alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'
 source ~/wiki/linux/scripts/inUse/ROS.sh
 alias sshturtle='ssh kobuki@146.136.59.23'
 
+source ~/wiki/linux/scripts/inUse/vt2.sh

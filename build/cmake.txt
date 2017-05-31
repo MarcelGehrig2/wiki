@@ -14,7 +14,7 @@ list(APPEND ADDITIONAL_INCLUDE_DIRS "${EC_DEMO_DC}/Examples/EcMasterDemoDc")
 
 
 $ENV{name}      # This is not an environment variable , but this is how you can access environment variables from cmake files. It returns the content of the environment variable with the given name (e.g. $ENV{PROGRAMFILES}) 
-
+message( STATUS "ROS_TREE: " $ENV{ROS_TREE} )
 
 
 # miscellaneous
