@@ -1,8 +1,14 @@
 #!/bin/bash
 # sourced by ~/.bashrc.sh
+[[ $_ != $0 ]] && script_is_sourced=true || script_is_sourced=false
+if [ $script_is_sourced ]; then
+    SCRIPT_PATH=$BASH_SOURCE
+else
+    SCRIPT_PATH="$(readlink -f $0)"
+fi
+SCRIPT_DIR="$(dirname $SCRIPT_PATH)"
+SCRIPT_NAME=$(basename $SCRIPT_PATH)
 
-script="$(readlink -f $0)"
-script_dir="$(dirname $script)"
 
 # alias
 # #####
@@ -21,6 +27,7 @@ alias .5='cd ../../../../..'
 
 #calculator
 alias bc='bc -l'
+alias calc='bc'
 
 alias diff='colordiff'
 
@@ -34,6 +41,8 @@ alias grep='grep --color=auto'
 
 alias restartNetwork='sudo service network-manager restart'
 
+alias myecho='$SCRIPT_DIR/myEcho.sh'
+
 # confirmation #
 alias mv='mv -i' 
 alias cp='cp -i' 
@@ -42,13 +51,13 @@ alias ln='ln -i'
 # git
 alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "commit"; git s'   #quick commit
 alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
-source ~/wiki/linux/scripts/inUse/git-completion.bash
+source $SCRIPT_DIR/git-completion.bash
 
 # myEnv
-alias myEnvArm='. ~/wiki/linux/scripts/inUse/myEnv/envArm.sh'
+alias myEnvArm2='source $SCRIPT_DIR/myEnv/envArm.sh'
 
 # myEnv alias
-alias myEnvBuildroot='. ~/wiki/linux/scripts/inUse/myEnv/buildroot.sh'
+alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
 
 
 # text editor
@@ -63,11 +72,11 @@ PS1='\[\e[1;32m\]\W $ \[\e[0m\]'
 
 
 # EtherCat
-alias ethercat='. ~/wiki/linux/scripts/inUse/EtherCAT.sh'
+alias ethercat='source $SCRIPT_DIR/EtherCAT.sh'
 
 
 # ROS
-source ~/wiki/linux/scripts/inUse/ROS.sh
+source $SCRIPT_DIR/ROS.sh
 alias sshturtle='ssh kobuki@146.136.59.23'
 
-source ~/wiki/linux/scripts/inUse/vt2.sh
+source $SCRIPT_DIR/vt2.sh

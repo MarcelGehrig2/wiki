@@ -8,3 +8,11 @@ else
 fi
 SCRIPT_DIR="$(dirname $SCRIPT_PATH)"
 SCRIPT_NAME=$(basename $SCRIPT_PATH)
+
+
+sudo apt-get -y install npm
+sudo npm install -g --unsafe-perm node-red
+sudo npm install -g npm@2.x
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install -g node-red-dashboard
+

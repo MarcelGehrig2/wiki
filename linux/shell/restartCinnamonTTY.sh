@@ -4,4 +4,4 @@ script="$(readlink -f $0)"
 script_dir="$(dirname $script)"
 
 
-export DISPLAY=:0; cinnamon &
+export DISPLAY=:0; cinnamon --replace &
