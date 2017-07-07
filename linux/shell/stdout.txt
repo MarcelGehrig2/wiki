@@ -1,0 +1,4 @@
+ls -a | tee output.file
+
+
+program [arguments...] 2>&1 | tee outfile

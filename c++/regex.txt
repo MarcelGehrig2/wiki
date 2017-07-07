@@ -1,0 +1,37 @@
+// regex
+// ////////////////////////////////////////////////////////////////////////////
+
+
+
+\d	number
+\D	anything but a number (!number)
+\s	space
+\S	!space
+\w	character
+\W	!character
+.	every character except line break
+\b	between two words
+[a-z]	all lowercase letter
+[0-9]	all numbers
+
+?	0 or 1 repetition
+*	0 or more repetition
+{n}	n repetition	\d{5}	-> 5 digits in a row
+
+\e	escape
+\f	form feed
+\n	newline
+\r	carriage retunr
+\t	tab
+
+
+// examples
+\d{5}	-> 5 digits in a row
+\d{1,5}	-> 1 to 5 digits in a row
+
+\$\d*\.\d{2}	$100.00
+
+calend[ae]r		both 'claender' and 'calandar'
+
+[A-Fa-t0-4]
+(Jennifer|Jen|Jenny)\b\w+\b	
