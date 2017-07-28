@@ -1,0 +1,13 @@
+https://unicode-table.com/en/
+
+
+http://www.unit-conversion.info/texttools/ascii/ 
+
+
+
+hex		 = dec	   = symbol
+\char"22 = \char34 = "
+
+\char"22	"
+\char"7B	{
+\char"7D	}
