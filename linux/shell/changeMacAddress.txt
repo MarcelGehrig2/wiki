@@ -1,0 +1,9 @@
+
+NOT TESTED
+
+
+https://ubuntuforums.org/showthread.php?t=1506928
+
+sudo ifconfig <interface name> down
+ifconfig <interface name> hw ether <new MAC>
+ifconfig <interface name> up
