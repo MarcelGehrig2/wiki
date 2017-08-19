@@ -41,6 +41,8 @@ alias grep='grep --color=auto'
 
 alias restartNetwork='sudo service network-manager restart'
 
+alias restartCinnamon='$SCRIPT_DIR/restartCinnamon.sh'
+
 alias myecho='$SCRIPT_DIR/myEcho.sh'
 
 # confirmation #
