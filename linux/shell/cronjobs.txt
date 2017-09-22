@@ -1,0 +1,22 @@
+# https://www.thesitewizard.com/general/set-cron-job.shtml
+
+
+
+crontab -e
+
+
+
+#min	hour	day	month	weekday command
+*/5	*	*	*	*	/home/mainpc0/uptime.sh			every 5 minutes
+*	*/3	*	*	*	/home/mainpc0/uptime.sh			every 3 houer
+5					/home/mainpc0/uptime.sh			at 00:05 every day
+5	*	*	*	*	/home/mainpc0/uptime.sh			once every hour at xx:05
+0	20	*	*	*	/home/mainpc0/uptime.sh			every day at 20:00
+0	20	1,20	*	*	/home/mainpc0/uptime.sh			at the 1th and 20th of every month at 20:00
+2	3	4,5	6	7	/home/mainpc0/uptime.sh			3:02 am on the 4th and 5th of June (6) AND on every Sunday (7)
+
+30 11 * * * /usr/bin/wget http://www.example.com/cron.php
+
+
+
+weekday:	0 = 7 = sunday
