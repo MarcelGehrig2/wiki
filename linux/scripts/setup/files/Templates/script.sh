@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [[ $_ != $0 ]] && script_is_sourced=true || script_is_sourced=false
 if [ $script_is_sourced ]; then
