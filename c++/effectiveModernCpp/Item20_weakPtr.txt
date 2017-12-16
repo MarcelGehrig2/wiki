@@ -1,0 +1,65 @@
+// ITEM 20		Use std::weak_ptr for std::shared_ptr - like pointers that can dangle
+// ////////////////////////////////////////////////////////////////////////////
+
+// summary -------------------------------------------------------------------
+// * std::weak_ptrs  model temporary ownership of objects which can be deleted at any time by someone else
+// * similar to std::shared_ptr but does not affect the reference count (RC) and can dangle
+// * std::weak_ptrs can check, if they dangle! A raw pointer is not able to detect, if its object is destroyed!
+// * std::weak_ptrs are typically created from std::share_ptr
+// * there is no dereferencing operator
+// * if the object is used, the weak_ptr is converted to a shared_ptr to mark temporary ownership. The shared_ptr can be dereferenced. ( use weakPtr.lock() )
+
+
+// implementation -------------------------------------------------------------
+
+auto sharedPtr = std::make_shared<A>();	// create object and shared_ptr. Reference count (RC) = 1
+...
+std::weak_ptr<A> weakPtr(sharedPtr);	// weak_ptr points to same object. RC remains 1
+..
+sharedPtr = nullptr;					// RC goes to 0 and the object is destroyed. weak_ptr now dangles
+...
+if (weakPtr.expired()) ...				// check if weakPtr dangles
+...
+
+// dereferencing method 1
+auto sharedPtr2 = weakPtr.lock();		// mark temporary ownership by converting to shared_ptr
+	// if the weak_ptr is expired, sharetPtr2 is null
+sharedPtr2->foo( arg );				// the shared_ptr can be dereferenced
+
+// dereferencing method 2
+std::shared_ptr<A> sharedPtr3( weakPtr )	// mark temporary ownership by converting to shared_ptr
+	// if the weak_ptr is expired, std::bad_weak_ptr exception is thrown
+
+
+// use case: cached objects ----------------------------------------------------
+// if loading an object is expensive (i.e. long loading time by accessing a hard drive or a database) it can be useful to cache the object. The following example stores a weak_ptr every time an object is loaded. If the object was loaded in the past, it is checked if the object still exists somewhere in the program (heap). If so (reference count > 0) it returns a smart_ptr to the existing object. No expensive loading procedure is needed.
+// this solution need very little resources, because it only stores weak_ptr and no object.
+// this implementation does not delete old, unused weak_ptr in the map
+
+std::shared_ptr<const Object> fastLoadObject(ObjectID id)
+{
+	// static map with weak pointers to objects
+	static std::unordered_map<ObjectID,	std::weak_ptr<const Object>> cache;
+	auto objPtr = cache[id].lock();
+	 
+	if (!objPtr) {
+		objPtr = loadObject(id);
+		cache[id] = objPtr;
+	}
+	return objPtr; 
+}
+
+
+// use case 1: the Observer design pattern --------------------------------------
+// * subjects (objects whose state may change) should notify observers, if there state changes. A subject must store a reference to all its observers to accomplish this
+// * subjects should not affect the lifetime of the observers -> no shared_ptr
+// * a weak_ptr is suitable for this task
+// * don't forget to check for dangling pointers
+
+
+// use case 2: -----------------------------------------------------------------
+// * use weak_ptr if the object can be destroyed by someone else. Weak_ptr can check, if the object is destroyed. Raw_ptr can only check, if it has been assigned an object yet. 
+
+
+// use case 3: ----------------------------------------------------------------
+// * if circular dependencies exist, use weak_ptr instead of raw pointer

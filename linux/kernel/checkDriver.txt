@@ -1,0 +1,11 @@
+
+
+//pci device:
+lspci
+
+// usb
+usb-devices
+
+
+
+

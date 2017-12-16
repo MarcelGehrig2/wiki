@@ -44,4 +44,8 @@ sudo apt-get -y install terminator
 mkdir -p ~/.config/terminator
 cp -p $script_dir/files/configTerminator ~/.config/terminator/config
 
-
+# unetboot
+sudo add-apt-repository ppa:gezakovacs/ppa
+sudo apt-get update
+sudo apt-get install unetbootin
+sudo apt-get install extlinux

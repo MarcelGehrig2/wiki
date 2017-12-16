@@ -1,0 +1,132 @@
+// ITEM 18      Use std::unique_ptr for exclusive-ownership resource management
+// ////////////////////////////////////////////////////////////////////////////
+
+// summary -------------------------------------------------------------------
+// * expresses unique ownership. use std::shared_ptr if multiple owner are possible
+// * defined in header <memory>
+// * std::unique_ptr are the same size as raw pointer and for most operations (including dereferencing), they execute exactly the same instructions --> they use little resources like raw pointer
+// * std::unique_ptr embodies exclusive ownership semantics. Moving a std::unique_ptr transfers ownership from the source pointer to the destination pointer.
+// * copying a std::unique_ptr is not allowed, because it would not be unique anymore
+// * upon destruction, a non-null std::unique_ptr destroys its resource (object which it points to)
+// * a custom deleter can be used to destroy its resource
+// * the size of the std::unique_ptr grows if a custom deleter is used. If a lamda function with no captures is used as custom deleter the size of the std::unique_ptr does not grow
+// * std::make_unique can be used to create an unique_ptr and an object at the same time
+// * std::make_unique is only available since C++14
+// * std::unique_ptr come in two basic forms:
+//		- individual objects:	std::unique_ptr<T>
+//		- arrays:				std::unique_ptr<T[]>
+// * std::unique can be converted to std::shared_ptr
+
+
+// std::make_unique -----------------------------------------------------------
+auto pw = std::make_unique<Widget>();	// Widget and uinque_ptr are created at the same time
+
+
+// custom deleter -------------------------------------------------------------
+// * the standard deleter uses 'delete' on the object
+// * a custom deleter can be used with an unique_ptr
+// * a lamda function or a function object (object with overloaded operator()) can be used as deleter
+// * the lambda function or operator() is executed when the unique_ptr is destroyed
+// * the deleter should delete the object, which the unique_ptr points to
+// * a custom deleter can be used to make a log entry before deleting an object
+
+// definition of deleter:
+auto customDeleter = [](A* object) {
+	std::cout << "Object '" << object->name << "' deleted with custom deleter" << std::endl;
+	delete object;
+};
+
+// assign deleter to unique_ptr
+std::unique_ptr<A, decltype(customDeleter)> ptrName(new A( name ), customDeleter);
+
+
+// possible use cases ---------------------------------------------------------
+// * everywhere where a raw pointer is used
+// * factory functions
+// * Pimple Idiom (Item 22)
+
+
+// good design practice -------------------------------------------------------
+// * use smart pointers (std::unique_ptr, std::share_ptr, std::weak_ptr) instead of raw pointers
+// * do not use std::unique_ptr<T[]>. Use std::array, std::vector and std::string instead
+
+
+// convert std::unique_ptr to std::shared_ptr ---------------------------------
+std::unique_ptr<std::string> unique = std::make_unique<std::string>("test");
+std::shared_ptr<std::string> shared = std::move(unique);	// conversion to std::shared_ptr
+
+// or:
+std::shared_ptr<std::string> shared = std::make_unique<std::string>("test");
+
+
+// executable example *********************************************************
+#include <iostream>
+#include <string>
+#include <memory>	//used for std::unique_ptr
+
+class A {
+public:
+    A (std::string name) : name(name) {
+		std::cout << "Object A with name '" << name << "' created." << std::endl;
+	};
+    std::string name;
+};
+
+
+// ||| custom deleter |||
+// customDeleter is a lambda-fct. Could also be an object -> 'operator()' is called, when unique_ptr is destroyed
+auto customDeleter = [](A* object) {
+	std::cout << "Object '" << object->name << "' deleted with custom deleter" << std::endl;
+	delete object;
+};
+
+
+// ||| factory |||
+// auto AFactory(std::string name)	// c++14 only
+std::unique_ptr<A, decltype(customDeleter)> AFactory(std::string name)
+{
+	std::cout << "AFactory is  being used" << std::endl;
+	auto ptr = new A( name );
+	std::unique_ptr<A, decltype(customDeleter)> ptrWithDeleter(ptr, customDeleter);
+    return ptrWithDeleter;
+};
+
+
+int main()
+{
+	auto ptrMakeUnique = std::make_unique<A> ( "make_unique" );				// creates new object AND new unique_ptr (c++14 only)
+	std::shared_ptr<A> ptrShared = std::make_unique<A> ( "make_shared" );	// creates unique_ptr and converts to std::shared_ptr
+	std::cout << ptrMakeUnique->name << " has been created with std::make_unique" << std::endl;
+	
+    auto ptrAFactory = AFactory( "AFactory" );  // create object and unique_ptr with factory (including custom deleter)
+	
+	{
+		// unique_ptr is created witch customDeleter, but no object
+		std::unique_ptr<A, decltype(customDeleter)> ptrWithDeleter(nullptr, customDeleter);
+		auto deleter = ptrWithDeleter.get_deleter();
+		ptrWithDeleter.reset( new A( "newA" ) );	// creates new object 'newA'
+		ptrWithDeleter.reset( new A( "newA.2" ) );	// creates new object 'newA.2' deletes object 'newA'
+		std::cout << "End of namespace {}" << std::endl;
+	}
+    
+    std::cout << std::endl << "Finished" << std::endl;
+}
+
+
+// output:
+
+// Object A with name 'make_unique' created.
+// Object A with name 'make_shared' created.
+// make_unique has been created with std::make_unique
+// AFactory is  being used
+// Object A with name 'AFactory' created.
+// Object A with name 'newA' created.
+// Object A with name 'newA.2' created.
+// Object 'newA' deleted with custom deleter
+// End of namespace {}
+// Object 'newA.2' deleted with custom deleter
+// 
+// Finished
+// Object 'AFactory' deleted with custom deleter
+
+// end of executable example **************************************************

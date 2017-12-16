@@ -44,9 +44,6 @@ alias restartNetwork='sudo service network-manager restart'
 alias restartCinnamon='$SCRIPT_DIR/restartCinnamon.sh'
 alias fucking='sudo'
 
-alias nano='nano --mouse -u --smooth --smarthome --const --autoindent'
-
-alias lsblk='lsblk -f'
 
 alias myecho='$SCRIPT_DIR/myEcho.sh'
 
@@ -69,7 +66,7 @@ alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
 
 # text editor
 alias gedit='xed'
-export EDITOR='xed'
+#export EDITOR='xed'
 
 
 # set prompt

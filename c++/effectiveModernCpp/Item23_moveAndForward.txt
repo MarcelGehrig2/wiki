@@ -1,0 +1,55 @@
+// ITEM 23		Understand std::move and std::forward
+// ////////////////////////////////////////////////////////////////////////////
+
+// summary -------------------------------------------------------------------
+// * std::move doesn't move anything, std::forward doesn't forward anything
+// * better name for std::move might be std::rvalue_cast
+// * std::move casts its argument to an rvalue! Without condition.
+// * std::forward casts its argument to an rvalue only if that argument is bound to an rvalue
+// * move requests on const objects are silently transformed into copy operations
+// * with move, copies of big objects (like strings) can be avoided
+
+// lvalue and rvalue ----------------------------------------------------------
+// * lvalue
+//		- has an identifiable location in the memory (heap or stack) -> address
+//		- references can only point to lvalues, OR const rvalue
+//		- all function parameters
+// * rvalue:	not an lvalue object
+// * examples:
+//		- int i = 2;		// i = lvalue; 2 = rvalue
+//		- int x = (i+2);	// (i+2) = rvalue because	int* p = &(i+2)	--> error
+// 		- dog d1;
+// 		- d1 = dog();		// d1 = lvalue; dog() = rvalue;
+// 		- int i = sum(3, 4) // i = lvalue; sum(3, 4) = rvalue
+// 		-
+// * array[3]	// generates rvalue from lvalue
+// * (i+1)		// generates rvalue from lvalue
+
+
+// l/r value reference in function declaration --------------------------------
+void printInt(int& i)	{ cout << "lvalue reference: " << i << endl; }
+void printInt(int&& i)	{ cout << "rvalue reference: " << i << endl; }
+void printInt(int i) {}	// compile error, because rvalue and lvalue reference are already declared
+...
+
+int a = 5;					// a is lvalue
+printInt(a);				// calls printInt(int& i)	lvalue
+printInt(6);				// calls printInt(int&& i)	rvalue
+printInt(std::move(a));		// calls printInt(int&& i)	rvalue
+
+
+// move const rvalues ---------------------------------------------------------
+// *
+class Annotation {
+public:
+	explicit Annotation(const std::string text) : value(std::move(text))
+...
+	std::string value;
+};
+// 1.) std:move SHOULD cast the string to an rvalue
+// 2.) value gets initialised with and rvalue -> the string does not have to be copied
+// WARNING moving a const lvalue: to remain constness std::move invokes the copy constructor if its argument is a CONST lvalue
+// this code wants to avoid an expensive copy of the string. But this does not work, because of CONST
+
+
+

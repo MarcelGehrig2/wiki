@@ -1,0 +1,69 @@
+// ITEM 21		Prefer std::make_unique and std::make_shared to direct use of new
+// ////////////////////////////////////////////////////////////////////////////
+
+// summary -------------------------------------------------------------------
+// * std::make_unique is only available since C++14
+// * the make functions are std::make_unique and std::make_shared
+// * you should usually prefer using the make functions over using new
+// * the make functions are more efficient than using new and passing the pointer to the constructor of a smart pointer
+// * the make functions reduce the risk of resources leak
+// * the make functions can NOT be used, if you want to use a custom deleter -> use new and the constructor of the smart_ptr
+// * the make functions need a workaround to be used for a object with a std::initializer_list as argument in the constructor
+// * the make functions may be inappropriate when weak_ptr points to very large objects
+
+
+// std::make_unique implementation for C++11 ----------------------------------
+// * without support for arrays and custom deleters
+// * do not put this implementation in the namespace std to avoid problems if you upgrade to C++14
+template<typename T, typename... Ts>
+std::unique_ptr<T> make_unique(Ts&&... params)
+{
+	return std::unique_ptr<T>(new T(std::forward<Ts>(params)...));
+}
+
+
+// advantages of make functions -----------------------------------------------
+// * the type of the object is only needed once (no code duplication)
+auto upw1(std::make_unique<Object>());		// with make function
+std::unique_ptr<Object> upw2(new Object);	// without make function
+
+// * with new, resources can be leaked
+processWidget(std::shared_ptr<Widget>(new Widget), computePriority());
+// the compiler may produce code which execute in following order:
+//   1. perform "new Widget"
+//   2. execute "computePriority()"
+//   3. run std::shared_ptr constructor
+// if "computePriority()" produces an exception during runtime, the dynamically allocated Widget from Step 1 will be leaked, because it will never be stored in the std::shared_ptr that’s supposed to start managing it in Step 3.
+// the following code snipped avoids this problem:
+processWidget(std::make_shared<Widget>(), computePriority());
+// this applies for std::shared_ptr / std::make_shared and std::unique_ptr / std::make_unique
+
+// * the make functions are more efficient (the compiler can generate smaller and faster code) than using new and passing the pointer to the constructor of a smart pointer
+
+
+// advantages of NOT using make functions -------------------------------------
+// * custom deleters can be used
+auto customDeleter = [](A* object) { ... };
+std::unique_ptr<A, decltype(customDeleter)> ptrName1(new A, customDeleter);
+std::shared_ptr<A> ptrName2(new A, customDeleter);
+
+// * std::initializer_list can be used for the constructor of the object with this workaround:
+auto initList = { 10, 20 };
+auto spv = std::make_shared<std::vector<int>>(initList);
+
+// * if you use a make_shared, the memory for the control block and the object is allocated in one chunk. If all shared_ptr are deleted (RC = 0) the object is destroyed. But if there are still weak_ptr pointing at the object (this counter is managed in the control block as well) the control block can not be destroyed. That implies, that the whole block of memory (including the part prior used for the object!) is not deallocated until no smart_ptr (including weak_ptr) points to the object anymore.
+
+
+// exception-safety with new --------------------------------------------------
+// * pass new directly to the constructor of the smart_ptr in a statement that does nothing else
+// safe:
+void processWidget(std::shared_ptr<Widget> spw, int priority);
+void cusDel(Widget *ptr);
+
+// NOT safe, potential resource leak:
+processWidget( std::shared_ptr<Widget>(new Widget, cusDel), computePriority() );
+// if computePriority() yield an exception, the dynamically allocated Widget will be leaked.
+
+
+
+

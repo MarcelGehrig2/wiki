@@ -1,0 +1,5 @@
+/sys/devices/system/cpu/cpu0/cache/ 
+
+
+	
+coherency_line_size 	//cache line size in byte

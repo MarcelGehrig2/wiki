@@ -1,3 +1,6 @@
+# word in all files in folder
+grep -rnw ./ -e 'word to search'
+
 
 
 # file durchsuchen
