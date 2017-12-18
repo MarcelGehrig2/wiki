@@ -39,6 +39,8 @@ alias make='make -j4'
 
 alias grep='grep --color=auto'
 
+alias reboot='systemctl reboot'
+
 alias restartNetwork='sudo service network-manager restart'
 
 alias restartCinnamon='$SCRIPT_DIR/restartCinnamon.sh'

@@ -49,3 +49,11 @@ sudo add-apt-repository ppa:gezakovacs/ppa
 sudo apt-get update
 sudo apt-get install unetbootin
 sudo apt-get install extlinux
+
+
+# grub customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+sudo apt-get update
+sudo apt-get install -y grub-customizer
+
+
