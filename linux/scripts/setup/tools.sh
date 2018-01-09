@@ -8,6 +8,7 @@ sudo apt-get -y install htop
 sudo apt-get -y install tree
 sudo apt-get -y install putty
 sudo apt-get -y install pv      # progress bar for pipe
+sudo apt-get -y install nautilus-open-terminal
 
 
 #VNC
