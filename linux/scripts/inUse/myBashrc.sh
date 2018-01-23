@@ -52,6 +52,8 @@ alias lsblk='lsblk -f'
 
 alias myecho='$SCRIPT_DIR/myEcho.sh'
 
+alias team='/opt/teamviewer/tv_bin/TeamViewer &'
+
 # confirmation #
 alias mv='mv -i' 
 alias cp='cp -i' 
