@@ -95,3 +95,4 @@ alias sshturtle='ssh kobuki@146.136.59.23'
 
 alias sshmain0='ssh mainpc0@mainpc0'
 alias sshmain0ip='ssh mainpc0@146.136.56.119'
+alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'
