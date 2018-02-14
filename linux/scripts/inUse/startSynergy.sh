@@ -1,6 +1,7 @@
 #!/bin/bash
+DISPLAY=:0
 
-pkill -f /usr/bin/synergyc
+sudo pkill -f /usr/bin/synergyc
 
 /usr/bin/synergyc --enable-crypto pcinf053
 /usr/bin/synergyc --enable-crypto pcwinf040
