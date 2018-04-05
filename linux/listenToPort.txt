@@ -1,0 +1,9 @@
+# nc = netcat
+
+
+# listen to port
+nc -l localhost 23
+
+
+# connect to listener
+nc localhost 23
