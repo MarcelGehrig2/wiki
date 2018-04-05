@@ -20,7 +20,7 @@ fi
 #sudo apt install sshpass
 
 #echo "alias sshmainpcp='sshpass -p chair ssh mainpcp@146.136.39.214 -p 9022'" >> ~/.bashrc
-#echo "alias sshmasterpc='sshpass -p chair ssh mainpcp@98.116.5.90 -p 9006'" >> ~/.bashrc
+#echo "alias sshmasterpc='sshpass -p chair ssh chair@98.116.5.90 -p 9006'" >> ~/.bashrc
 #echo "alias sshmainpc1='sshpass -p chair ssh mainpcp@98.116.5.90 -p 9016'" >> ~/.bashrc
 #echo "alias sshmainpc2='sshpass -p chair ssh mainpcp@98.116.5.90 -p 9026'" >> ~/.bashrc
 #echo "alias sshmainpc3='sshpass -p chair ssh mainpcp@98.116.5.90 -p 9036'" >> ~/.bashrc
@@ -33,7 +33,7 @@ fi
 
 echo "" >> ~/.bashrc
 echo "alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'" >> ~/.bashrc
-echo "alias sshmasterpc='ssh mainpcp@98.116.5.90 -p 9006'" >> ~/.bashrc
+echo "alias sshmasterpc='ssh chair@98.116.5.90 -p 9006'" >> ~/.bashrc
 echo "alias sshmainpc1='ssh mainpcp@98.116.5.90 -p 9016'" >> ~/.bashrc
 echo "alias sshmainpc2='ssh mainpcp@98.116.5.90 -p 9026'" >> ~/.bashrc
 echo "alias sshmainpc3='ssh mainpcp@98.116.5.90 -p 9036'" >> ~/.bashrc
