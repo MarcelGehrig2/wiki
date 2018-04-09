@@ -58,3 +58,5 @@ sudo apt-get update
 sudo apt-get install -y grub-customizer
 
 
+# screen
+sudo apt get install -y screeen
