@@ -46,7 +46,7 @@ alias restartNetwork='sudo service network-manager restart'
 alias restartCinnamon='$SCRIPT_DIR/restartCinnamon.sh'
 alias fucking='sudo'
 
-alias nano='nano --mouse -u --smooth --smarthome --const --autoindent'
+alias nano='nano -u --smooth --smarthome --const --autoindent'
 
 alias lsblk='lsblk -f'
 
