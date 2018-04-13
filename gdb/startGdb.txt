@@ -1,0 +1,5 @@
+sudo gdb --args v4_dummyPositionCtrl -f eni_baseframe11ELMOe_gainSchedulingManualIndex.xml -i8254x 1 1 -key FA28BAA8-ECA724F2-EABED53F -v 0
+
+
+
+cpuidle.off=1 intel_idle.max_cstate=0

@@ -1,0 +1,12 @@
+// https://unix.stackexchange.com/a/162146
+
+//create patch
+diff -Naru a b > a.patch
+
+
+//apply patch
+patch -p0 < a.patch
+
+
+// dry run
+patch --dry-run -p0 < a.patch
