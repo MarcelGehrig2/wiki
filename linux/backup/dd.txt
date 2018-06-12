@@ -1,0 +1,20 @@
+
+lsblk
+dd if=/dev/sdx of=/path/to/image bs=1M
+
+
+mount -o loop file.iso /mnt/dir
+
+
+
+// // partition table
+https://www.cyberciti.biz/faq/linux-backup-restore-a-partition-table-with-sfdisk-command/
+
+//list partitiontable
+sudo sfdisk -l /dev/mmcblk0
+
+//backup partitiontable
+sfdisk -d /dev/sda > sda.partition.table.12-30-2015.txt
+
+//restore partitiontable
+sfdisk -f /dev/sda < /media/usb/sda.partition.table.12-30-2015.txt

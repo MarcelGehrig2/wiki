@@ -1,0 +1,13 @@
+https://wiki.ubuntuusers.de/gddrescue/
+
+https://unix.stackexchange.com/questions/14560/how-to-recover-data-from-a-bad-sd-card?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+
+sudo apt-get install gddrescue 
+
+
+
+sudo ddrescue -dr3 /dev/mmcblk0 ./ddrescue_mobileG4_20150517.image ddrescue_mobileG4_20150517.logfile
+sudo ddrescue -dr3 /dev/mmcblk0p1 ./ddrescue_mobileG4_20150517_p1.image ddrescue_mobileG4_20150517_p1.logfile
+
+

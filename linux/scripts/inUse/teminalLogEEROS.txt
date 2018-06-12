@@ -1,0 +1,508 @@
+./start_v3_positionCtrl.sh 
+start force sensor
+start RGB camera
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+start rostopic monitor
+performance
+Full command line: -f "eni_baseframe11ELMOe_gainSchedulingManualIndex.xml"-i8254x 1 1 -perf -key 7A387D1D-64112467-57B665DE 
+
+000004 : Run demo now with cycle time 1000 usec
+000004 : Using AuxClock
+000004 : nVerbose: 0
+
+robot@192.168.0.11's password: startLaserNodes
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+The authenticity of host '192.168.0.24 (192.168.0.24)' can't be established.
+ECDSA key fingerprint is 6b:c3:5d:aa:e4:f2:e9:a2:b6:51:96:b8:85:de:84:c3.
+Are you sure you want to continue connecting (yes/no)? 1
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 17: roslaunch: command not found
+000004 : Calibrate tsc measurement... done: 2294 MHz
+003005 : EC-Master V2.9.1.06 (Protected) for Linux_x64 Copyright acontis technologies GmbH @ 2016
+003005 : OsGetLinkLayerRegFunc: try to load '/home/mainpcp/github/scripts/libemllI8254x.so'
+003006 : PCI: device 02:00.0 found
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+startCameraNodes Chair5
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 17: roslaunch: command not found
+006036 : LicenseKey: 7A387D1D-64112467-57B665DE
+006036 : ACTIVATION SUCCESSFULL
+006190 : Retry sending a acyclic frame due to timeout
+006190 : EtherCAT command IDX set value=0xdf
+006310 : Retry sending a acyclic frame due to timeout
+006310 : EtherCAT command IDX set value=0xe0
+006433 : prepare
+ERROR: Unable to communicate with master!
+2018-06-02 17:50:46    T:  initElmoDrives()
+010464 : Cyclic command WKC error on LRW - Address: 0x10000000 - WKC act/set=11/33
+010506 : 
+010506 : Job times during startup <INIT> to <OP>:
+010506 : ================================================================
+010506 : PerfMsmt 'JOB_ProcessAllRxFrames' (avg/max) [usec]:    4.8/ 22.4
+010506 : PerfMsmt 'JOB_SendAllCycFrames  ' (avg/max) [usec]:    4.9/ 11.2
+010506 : PerfMsmt 'JOB_MasterTimer       ' (avg/max) [usec]:    6.2/ 63.2
+010506 : PerfMsmt 'JOB_SendAcycFrames    ' (avg/max) [usec]:    2.5/ 30.2
+010506 : PerfMsmt 'Cycle Time            ' (avg/max) [usec]:  999.9/1010.2
+010506 : PerfMsmt 'myAppWorkPd           ' (avg/max) [usec]:    0.2/  6.5
+010506 : PerfMsmt 'Write DCM logfile     ' (avg/max) [usec]:    0.0/  2.2
+010506 : 
+010506 : DCM during startup (<INIT> to <OP>)
+CAN232: RS232 connection successfull
+CAN232: closeCANChannel: 
+CAN232: closeCANChannel successful
+CAN232: can232 version: 
+V1325
+CAN232: setUpCAN125kbps():
+CAN232: setUpCAN125kbps successful
+CAN232: switchOffAutoPoll():
+CAN232: switchOffAutoPoll successful
+CAN232: openCANChannelNormalMode():
+CAN232: openCANChannelNormalMode successful
+2018-06-02 17:50:50    I:  SocketClient thread for local map started
+2018-06-02 17:50:50    I:  Local Map Client connected to ip=192.168.2.6
+2018-06-02 17:50:50    T:  Thread '139775263188736' with prio=5 started.
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    T:  Thread '139775254796032' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139775246403328' with prio=5 started.
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    T:  Thread '139775238010624' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139775229617920' with prio=5 started.
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    T:  Thread '139774878807808' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774870415104' with prio=5 started.
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50  P I:  open UWB on port: /dev/ttyACM0
+2018-06-02 17:50:50  P I:  UWB interface now open
+2018-06-02 17:50:50    T:  Thread '139774862022400' with prio=5 started.
+2018-06-02 17:50:50    I:  SocketServer thread started
+2018-06-02 17:50:50    T:  Thread '139774853629696' with prio=5 started.
+2018-06-02 17:50:50  P W:  UWB decoding warning: got a new start byte at index 63
+2018-06-02 17:50:50    T:  Thread '139774845236992' with prio=5 started.
+2018-06-02 17:50:50    I:  use raw: 0
+OFFSET MAGN 2.3e-05; 1.5e-05
+2018-06-02 17:50:50  K I:  Spline handler started
+2018-06-02 17:50:50  K I:  Server thread started
+2018-06-02 17:50:50    T:  Thread '139774274828032' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774266435328' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774140610304' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774258042624' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774249649920' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774241257216' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774232864512' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774224471808' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774132217600' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774123824896' with prio=5 started.
+2018-06-02 17:50:50  S W:  safety system verified: 25 safety levels are present
+2018-06-02 17:50:50    T:  Thread '139774115432192' with prio=5 started.
+2018-06-02 17:50:50    T:  Thread '139774107039488' with prio=5 started.
+2018-06-02 17:50:50  M E:  upgrade prio of WDT SS
+2018-06-02 17:50:50    T:  Thread '139774098646784' with prio=5 started.
+2018-06-02 17:50:50  K I:  Command handler started
+2018-06-02 17:50:50    T:  Thread '139774090254080' with prio=5 started.
+2018-06-02 17:50:50  K I:  Server thread started
+2018-06-02 17:50:50  K I:  Chair MQTT Client started
+2018-06-02 17:50:50  K I:  Initializing for server 'tcp://192.168.2.6:1883'... clientID chair5
+			   
+2018-06-02 17:50:50  A T:  starting realtime thread 22346:22679 with priority 48
+2018-06-02 17:50:50  A T:  starting realtime thread 22346:22680 with priority 47
+
+>>Connected:::: 
+
+2018-06-02 17:50:50  K I:  curSafetyLevel: Initializing
+			   
+2018-06-02 17:50:50  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:50  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:50  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:50  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:51  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:52  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:53  S I:  triggering event: 'Do Initialization' in level 'Initializing'
+2018-06-02 17:50:53  S I:  new safety level: 'HomingWheels'
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:53  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54  P T:  wheel 1 Captured position index: 239429 Captured position: 0
+2018-06-02 17:50:54  P T:  wheel 2 Captured position index: -106757 Captured position: 0
+2018-06-02 17:50:54  P T:  wheel 3 Captured position index: 373664 Captured position: 0
+2018-06-02 17:50:54  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:54  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:54  P I:  ______________________________________________________________
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54    T:  Argument offset: 218914
+2018-06-02 17:50:54    T:  captured Position: -547019
+2018-06-02 17:50:54    T:  setOffsetAtIndexPos(...) offs: 765933
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:54  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:54    T:  Argument offset: 346728
+2018-06-02 17:50:54    T:  captured Position: 373668
+2018-06-02 17:50:54    T:  setOffsetAtIndexPos(...) offs: -26940
+2018-06-02 17:50:55    T:  Argument offset: 333101
+2018-06-02 17:50:55    T:  captured Position: -893555
+2018-06-02 17:50:55    T:  setOffsetAtIndexPos(...) offs: 1226656
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:55  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:50:55  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:50:55  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:50:55  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:55  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:55  P I:  ______________________________________________________________
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:55  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:56  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:50:56  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:50:56  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:50:56  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:56  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:56  P I:  ______________________________________________________________
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:57  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:50:57  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:50:57  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:50:57  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:57  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:57  P I:  ______________________________________________________________
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:57  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:58  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:50:58  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:50:58  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:50:58  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:58  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:58  P I:  ______________________________________________________________
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:58  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:59  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:50:59  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:50:59  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:50:59  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:50:59  P T:  wheel 5 Captured position index: 11887 Captured position: 0
+2018-06-02 17:50:59  P I:  ______________________________________________________________
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:50:59  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:00    T:  Argument offset: 387894
+2018-06-02 17:51:00    T:  captured Position: -381349
+2018-06-02 17:51:00    T:  setOffsetAtIndexPos(...) offs: 769243
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:00  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:51:00  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:51:00  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:51:00  P T:  wheel 4 Captured position index: 74095 Captured position: 0
+2018-06-02 17:51:00  P T:  wheel 5 Captured position index: -381349 Captured position: 1
+2018-06-02 17:51:00  P I:  ______________________________________________________________
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:00    T:  Argument offset: 439671
+2018-06-02 17:51:00    T:  captured Position: 74095
+2018-06-02 17:51:00    T:  setOffsetAtIndexPos(...) offs: 365576
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:00  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:01  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:51:01  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:51:01  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:51:01  P T:  wheel 4 Captured position index: 74095 Captured position: 1
+2018-06-02 17:51:01  P T:  wheel 5 Captured position index: -381349 Captured position: 1
+2018-06-02 17:51:01  P I:  ______________________________________________________________
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:01  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:02  P T:  wheel 1 Captured position index: -547019 Captured position: 1
+2018-06-02 17:51:02  P T:  wheel 2 Captured position index: -893555 Captured position: 1
+2018-06-02 17:51:02  P T:  wheel 3 Captured position index: 373668 Captured position: 1
+2018-06-02 17:51:02  P T:  wheel 4 Captured position index: 74095 Captured position: 1
+2018-06-02 17:51:02  P T:  wheel 5 Captured position index: -381349 Captured position: 1
+2018-06-02 17:51:02  P I:  ______________________________________________________________
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:02  S I:  triggering event: 'Homing of wheels completed' in level 'HomingWheels'
+2018-06-02 17:51:02  S I:  new safety level: 'HomingSeat'
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:02  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:03  P I:   Seat pos: 128349; 250drives enabled 1
+___________________________________________________________________________________________________
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:03  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:04  P I:   Seat pos: 152925; 250drives enabled 1
+___________________________________________________________________________________________________
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:04  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:05  P I:   Seat pos: 193488; 250drives enabled 1
+___________________________________________________________________________________________________
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:05  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:06  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:06  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:06    T:  Argument offset: 117888
+2018-06-02 17:51:06    T:  captured Position: 210048
+2018-06-02 17:51:06    T:  setOffsetAtIndexPos(...) offs: -92160
+2018-06-02 17:51:06  P I:   Seat pos: 117903 indexpulsepos: 210048
+2018-06-02 17:51:06  S I:  triggering event: 'Seat homing completed' in level 'HomingSeat'
+2018-06-02 17:51:06  S I:  new safety level: 'Ready'
+2018-06-02 17:51:06  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:06  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/detected_obstacles3.txt
+2018-06-02 17:51:06  S I:  triggering event: 'Go To Emergency Collision Sensors Off' in level 'Ready'
+2018-06-02 17:51:06  S I:  new safety level: 'Emergency Collision Sensors Off'
+2018-06-02 17:51:06  K E:  MONITOR LASERSCANNER 0
+2018-06-02 17:51:06  S I:  triggering event: 'Go To Emergency Collision Sensors Off' in level 'Ready'
+2018-06-02 17:51:06  S I:  new safety level: 'Emergency Collision Sensors Off'
+2018-06-02 17:51:06  K E:  MONITOR REALSENSE 0
+2018-06-02 17:51:06  K W:  Restart Laser Ros Application
+startLaserNodes
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 17: roslaunch: command not found
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+2018-06-02 17:51:16  S I:  triggering event: 'Reset Emergency' in level 'Emergency Collision Sensors Off'
+2018-06-02 17:51:16  S I:  new safety level: 'ResetEmergency'
+2018-06-02 17:51:16  K W:  Reboot Camera Board
+2018-06-02 17:51:16  K I:  Client connection from ip=192.168.2.6 accepted
+2018-06-02 17:51:16  K I:  spline file received, size: 203
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+2018-06-02 17:51:16  S I:  triggering event: 'Go To Ready' in level 'ResetEmergency'
+2018-06-02 17:51:16  S I:  new safety level: 'Ready'
+2018-06-02 17:51:21  K I:  spline file received, size: 20
+2018-06-02 17:51:21  S I:  triggering event: 'Go To Behaviour Mode' in level 'Ready'
+2018-06-02 17:51:21  S I:  new safety level: 'SettingParamBehaviour'
+2018-06-02 17:51:21  K I:  spline file received, size: 202
+2018-06-02 17:51:22  S I:  triggering event: 'Parameters Set, go to Behaviour Motion' in level 'SettingParamBehaviour'
+2018-06-02 17:51:22  S I:  new safety level: 'MoveBehaviour'
+2018-06-02 17:51:26  K I:  spline file received, size: 20
+2018-06-02 17:51:26  K I:  spline file received, size: 200
+2018-06-02 17:51:31  K I:  spline file received, size: 20
+2018-06-02 17:51:31  K I:  spline file received, size: 206
+SplineHandler: no crossover
+2018-06-02 17:51:36  K I:  spline file received, size: 20
+2018-06-02 17:51:36  K I:  spline file received, size: 205
+SplineHandler: no crossover
+2018-06-02 17:51:41  K I:  spline file received, size: 20
+2018-06-02 17:51:41  K I:  spline file received, size: 203
+SplineHandler: no crossover
+2018-06-02 17:51:46  K W:  Restart Camera Ros Application
+startCameraNodes Chair5
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 13: roslaunch: command not found
+2018-06-02 17:51:46  K I:  spline file received, size: 20
+2018-06-02 17:51:46  K I:  spline file received, size: 202
+SplineHandler: no crossover
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 17: roslaunch: command not found
+ERROR: Unable to communicate with master!
+2018-06-02 17:51:51  K I:  spline file received, size: 20
+2018-06-02 17:51:51  K I:  spline file received, size: 201
+SplineHandler: no crossover
+2018-06-02 17:51:56  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:51:56  S I:  triggering event: 'Go To Emergency Collision Sensors Off' in level 'MoveBehaviour'
+2018-06-02 17:51:56  S I:  new safety level: 'Emergency Collision Sensors Off'
+2018-06-02 17:51:56  K E:  MONITOR LASERSCANNER 0
+2018-06-02 17:51:56  K W:  Restart Laser Ros Application
+2018-06-02 17:51:56  K I:  spline file received, size: 205
+SplineHandler: no crossover
+startLaserNodes
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 17: roslaunch: command not found
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+2018-06-02 17:52:01  K I:  spline file received, size: 20
+2018-06-02 17:52:01  K I:  spline file received, size: 198
+SplineHandler: no crossover
+2018-06-02 17:52:06  S I:  triggering event: 'Reset Emergency' in level 'Emergency Collision Sensors Off'
+2018-06-02 17:52:06  S I:  new safety level: 'ResetEmergency'
+2018-06-02 17:52:06  K W:  Reboot Camera Board
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+2018-06-02 17:52:06  K I:  spline file received, size: 205
+2018-06-02 17:52:06  S I:  triggering event: 'Go To Ready' in level 'ResetEmergency'
+2018-06-02 17:52:06  S I:  new safety level: 'Ready'
+2018-06-02 17:52:11  K I:  spline file received, size: 203
+SplineHandler: no crossover
+2018-06-02 17:52:11  S I:  triggering event: 'Go To Behaviour Mode' in level 'Ready'
+2018-06-02 17:52:11  S I:  new safety level: 'SettingParamBehaviour'
+2018-06-02 17:52:12  S I:  triggering event: 'Parameters Set, go to Behaviour Motion' in level 'SettingParamBehaviour'
+2018-06-02 17:52:12  S I:  new safety level: 'MoveBehaviour'
+2018-06-02 17:52:16  K I:  spline file received, size: 20
+2018-06-02 17:52:16  K I:  spline file received, size: 202
+SplineHandler: no crossover
+2018-06-02 17:52:21  K I:  spline file received, size: 20
+2018-06-02 17:52:22  K I:  spline file received, size: 203
+SplineHandler: no crossover
+2018-06-02 17:52:26  K I:  spline file received, size: 203
+SplineHandler: no crossover
+2018-06-02 17:52:31  K I:  spline file received, size: 20
+2018-06-02 17:52:32  K I:  spline file received, size: 205
+SplineHandler: no crossover
+2018-06-02 17:52:36  K W:  Restart Camera Ros Application
+startCameraNodes Chair5
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startCameraNodes_chair5.sh: line 17: roslaunch: command not found
+2018-06-02 17:52:38  K I:  error = socket read timed out
+2018-06-02 17:52:39  K I:  Client connection from ip=192.168.2.6 accepted
+ERROR: Unable to communicate with master!
+2018-06-02 17:52:44  K I:  spline file received, size: 20
+2018-06-02 17:52:46  M W:  RosTopicMonitor TIMEOUT: /tmp/rosNodeMonitor/ls_stream_out.txt
+2018-06-02 17:52:46  S I:  triggering event: 'Go To Emergency Collision Sensors Off' in level 'MoveBehaviour'
+2018-06-02 17:52:46  S I:  new safety level: 'Emergency Collision Sensors Off'
+2018-06-02 17:52:46  K E:  MONITOR LASERSCANNER 0
+2018-06-02 17:52:46  K W:  Restart Laser Ros Application
+startLaserNodes
+/home/mainpcp/catkin_ws/src:/opt/ros/indigo/share:/opt/ros/indigo/stacks
+1
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 13: roslaunch: command not found
+/home/mainpcp/catkin_ws/launch/startLaserNodes.sh: line 17: roslaunch: command not found
+2018-06-02 17:52:49  K I:  spline file received, size: 20
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+2018-06-02 17:52:50  K I:  spline file received, size: 200
+SplineHandler: no crossover
+2018-06-02 17:52:55  K I:  spline file received, size: 20
+2018-06-02 17:52:55  K I:  spline file received, size: 200
+SplineHandler: no crossover
+2018-06-02 17:52:56  S I:  triggering event: 'Reset Emergency' in level 'Emergency Collision Sensors Off'
+2018-06-02 17:52:56  S I:  new safety level: 'ResetEmergency'
+2018-06-02 17:52:56  K W:  Reboot Camera Board
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+2018-06-02 17:52:57  S I:  triggering event: 'Go To Ready' in level 'ResetEmergency'
+2018-06-02 17:52:57  S I:  new safety level: 'Ready'
+2018-06-02 17:53:00  K I:  spline file received, size: 20
+2018-06-02 17:53:01  K I:  spline file received, size: 204
+SplineHandler: no crossover
+2018-06-02 17:53:02  S I:  triggering event: 'Go To Behaviour Mode' in level 'Ready'
+2018-06-02 17:53:02  S I:  new safety level: 'SettingParamBehaviour'
+2018-06-02 17:53:03  S I:  triggering event: 'Parameters Set, go to Behaviour Motion' in level 'SettingParamBehaviour'
+2018-06-02 17:53:03  S I:  new safety level: 'MoveBehaviour'
+2018-06-02 17:53:06  K I:  spline file received, size: 20
+2018-06-02 17:53:06  K I:  spline file received, size: 203
+2018-06-02 17:53:11  K I:  spline file received, size: 204
+SplineHandler: no crossover
+2018-06-02 17:53:12  K I:  spline file received, size: 752
+2018-06-02 17:53:12  K I:  spline file received, size: 766
+2018-06-02 17:53:12  K I:  spline file received, size: 419
+2018-06-02 17:53:17  K I:  spline file received, size: 20
+2018-06-02 17:53:17  K I:  spline file received, size: 645
+2018-06-02 17:53:17  K I:  spline file received, size: 657
+2018-06-02 17:53:17  K I:  spline file received, size: 201
+
