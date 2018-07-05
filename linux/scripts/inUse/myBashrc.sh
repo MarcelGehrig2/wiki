@@ -100,3 +100,7 @@ alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'
 
 # chair stuff
 source $SCRIPT_DIR/myBashrcChair.sh
+
+source $SCRIPT_DIR/wiki.sh
+
+

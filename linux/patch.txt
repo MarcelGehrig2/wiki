@@ -1,6 +1,8 @@
 // https://unix.stackexchange.com/a/162146
 
 //create patch
+// a = original
+// b = gepatched
 diff -Naru a b > a.patch
 
 

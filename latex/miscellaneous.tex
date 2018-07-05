@@ -44,6 +44,7 @@ eeros::sequencer::Sequencer S;
 
 \texttt{Code segment für inline} 
 
+\textbackslash
 
 \usepackage{units}
 \unit[0.1]{s}
@@ -55,4 +56,15 @@ eeros::sequencer::Sequencer S;
 \newcommand{\xmark}{\ding{55}}%
 \cmark
 \xmark
+
+% Bildunterschrift mit Footnote
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=10cm,height=\textheight,keepaspectratio]{images/zynqBlockDiagram.png}
+	\caption[Block Diagramm Zynq\-7000]{Block Diagramm Zynq\-7000\footnotemark}
+	\label{fig:BlockDiagrammZynq}
+\end{figure}
+\footnotetext{https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

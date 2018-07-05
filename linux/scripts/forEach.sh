@@ -13,8 +13,28 @@ SCRIPT_NAME=$(basename $SCRIPT_PATH)
 # https://www.cyberciti.biz/faq/bash-for-loop/
 
 
-for VARIABLE in 1 2 3 4 5 
+for VARIABLE in 192.168.0.11 192.168.0.13
 do
 	echo $VARIABLE
-	echo aaaa
+	echo 
+done
+
+
+echo "iterating list:"
+LIST="
+192.168.0.11
+192.168.0.13 
+asdf
+"
+
+for VARIABLE in $LIST
+do
+	echo $VARIABLE
+	echo 
+done
+
+
+for i in {1..5};
+do
+	echo $i
 done
