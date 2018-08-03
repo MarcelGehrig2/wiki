@@ -38,3 +38,13 @@ for i in {1..5};
 do
 	echo $i
 done
+
+# array list
+declare -a array=("TODO" "XXX" "??")
+for KEYWORD in "${array[@]}"
+do
+        echo
+        echo $KEYWORD:
+        grep -rnwiHI ./ -e $KEYWORD
+done
+                        

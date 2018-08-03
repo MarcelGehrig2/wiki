@@ -38,6 +38,7 @@ alias mount='mount |column -t'
 alias make='make -j4'
 
 alias grep='grep --color=auto'
+export GREP_OPTIONS='--color=auto'
 
 alias reboot='systemctl reboot'
 
