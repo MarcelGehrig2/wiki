@@ -63,6 +63,7 @@ alias ln='ln -i'
 # git
 alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "commit"; git s'   #quick commit
 alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
+alias gitstore='git config credential.helper store'
 source $SCRIPT_DIR/git-completion.bash
 
 # myEnv

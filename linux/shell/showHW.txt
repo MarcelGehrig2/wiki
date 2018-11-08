@@ -1,6 +1,8 @@
 # http://www.binarytides.com/linux-commands-hardware-info/
 
 
+inxi -v7
+
 inxi -Fx
 
 

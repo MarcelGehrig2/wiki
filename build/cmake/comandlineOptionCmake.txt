@@ -1,0 +1,33 @@
+
+
+
+# don't forget the '-D' befor the variable name 'USE_ETHERCAT
+
+cmake -DCMAKE_INSTALL_PREFIX="$install_dir" -DUSE_ETHERCAT=TRUE ..
+
+
+
+
+# in CMakeLists.txt:
+IF (USE_ETHERCAT)
+	message(STATUS "USING ETHERCAT")
+ENDIF(USE_ETHERCAT)
+
+
+
+# This IF statement will be true:
+#  -DUSE_ETHERCAT=TRUE
+#  -DUSE_ETHERCAT=true
+#  -DUSE_ETHERCAT=asdf		# or any other string besides 'false' and 'FALSE'
+
+
+# This IF statement will be false:
+#  -DUSE_ETHERCAT=FALSE
+#  -DUSE_ETHERCAT=false
+#  -DUSE_ETHERCAT=
+#  <no declaration of USE_ETHERCAT at all>
+
+
+# There will be an error if:
+#  -USE_ETHERCAT=TRUE		# no 'D' before variable name
+

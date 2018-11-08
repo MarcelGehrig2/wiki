@@ -1,0 +1,1 @@
+watch 'lscpu | grep MHz'
