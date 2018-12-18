@@ -1,3 +1,22 @@
+# https://itsfoss.com/apt-get-linux-guide/
+
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get upgrade <package_name>
+
+apt-cache search <search term>
+apt-cache showpkg <package_name>
+
+sudo apt-get install <package_name>=<version_number>
+
+sudo apt-get remove <package_name>
+sudo apt-get purge <package_name>
+#apt-get remove just removes the binaries of a package. It doesn’t touch the configuration files
+#apt-get purge removes everything related to a package including the configuration files
+
+sudo apt-get clean
+
 
 
 # unable-to-correct-problems-you-have-held-broken-packages

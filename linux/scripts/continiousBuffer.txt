@@ -1,0 +1,4 @@
+#https://stackoverflow.com/questions/2753350/how-to-make-shell-output-redirect-write-while-script-is-still-running
+
+
+stdbuf -oL XXXXXXXX
