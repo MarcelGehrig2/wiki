@@ -48,15 +48,18 @@ cp -p $script_dir/files/configTerminator ~/.config/terminator/config
 # unetboot
 sudo add-apt-repository ppa:gezakovacs/ppa
 sudo apt-get update
-sudo apt-get install unetbootin
-sudo apt-get install extlinux
+sudo apt-get -y install unetbootin
+sudo apt-get -y install extlinux
 
 
 # grub customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 sudo apt-get update
-sudo apt-get install -y grub-customizer
+sudo apt-get -y install grub-customizer
+
+# gparted
+sudo apt-get -y install gparted
 
 
 # screen
-sudo apt get install -y screeen
+sudo apt get -y install -y screeen

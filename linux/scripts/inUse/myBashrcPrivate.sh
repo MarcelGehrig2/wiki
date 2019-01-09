@@ -38,7 +38,6 @@ alias mount='mount |column -t'
 alias make='make -j4'
 
 alias grep='grep --color=auto'
-export GREP_OPTIONS='--color=auto'
 
 alias reboot='systemctl reboot'
 
@@ -64,13 +63,13 @@ alias ln='ln -i'
 alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "commit"; git s'   #quick commit
 alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
 alias gitstore='git config credential.helper store'
-source $SCRIPT_DIR/git-completion.bash
+source ~/git-completion.bash
 
 # myEnv
-alias myEnvArm2='source $SCRIPT_DIR/myEnv/envArm.sh'
+#alias myEnvArm2='source $SCRIPT_DIR/myEnv/envArm.sh'
 
 # myEnv alias
-alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
+#alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
 
 
 # text editor
@@ -85,23 +84,23 @@ PS1='\[\e[1;32m\]\W $ \[\e[0m\]'
 
 
 # EtherCat
-alias ethercat='source $SCRIPT_DIR/EtherCAT.sh'
+#alias ethercat='source $SCRIPT_DIR/EtherCAT.sh'
 
 
 # ROS
-source $SCRIPT_DIR/ROS.sh
-alias sshturtle='ssh kobuki@146.136.59.23'
+#source $SCRIPT_DIR/ROS.sh
+#alias sshturtle='ssh kobuki@146.136.59.23'
 
 #source $SCRIPT_DIR/vt2.sh
 
 
-alias sshmain0='ssh mainpc0@mainpc0'
-alias sshmain0ip='ssh mainpc0@146.136.56.119'
-alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'
+#alias sshmain0='ssh mainpc0@mainpc0'
+#alias sshmain0ip='ssh mainpc0@146.136.56.119'
+#alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'
 
 
 # chair stuff
-source $SCRIPT_DIR/myBashrcChair.sh
+#source $SCRIPT_DIR/myBashrcChair.sh
 
 source $SCRIPT_DIR/wiki.sh
 

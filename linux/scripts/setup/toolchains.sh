@@ -7,7 +7,7 @@ script_dir="$(dirname $script)"
 
 #
 sudo apt-get -y install cmake
-sudo apt-get -y install build-essential
+sudo apt-get -y install libncurses5-dev build-essential libssl-dev
 sudo apt-get -y install libcomedi-dev libcomedi0
 
 
