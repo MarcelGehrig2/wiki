@@ -1,0 +1,7 @@
+Jupyter is part of anaconda3
+
+~/anaconda3/
+
+
+
+# jupyter notebook
