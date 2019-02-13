@@ -53,7 +53,7 @@ sudo apt-get -y install extlinux
 
 
 # grub customizer
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer -y
 sudo apt-get update
 sudo apt-get -y install grub-customizer
 
