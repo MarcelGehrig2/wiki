@@ -18,6 +18,7 @@ alias ls='ls --color=always'
 alias ll='ls -lah' 
 alias l.='ls -d .* --color=always'
 
+## cd stuff
 alias ..='cd ..' 
 alias ...='cd ../../'  
 alias ....='cd ../../../' 
@@ -72,16 +73,15 @@ source ~/git-completion.bash
 #alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
 
 
-# text editor
-alias gedit='xed'
-export EDITOR='xed'
-
+# vim
+alias vv='vim $(fzf)'
+set -o vi
 
 # set prompt
 #PS1="\e[0;32m[\W]\$ \e[m "
 PS1='\[\e[1;32m\]\W $ \[\e[0m\]'
 
-
+alias ssh1='ssh ubuntu@pcwinf039-linux'
 
 # EtherCat
 #alias ethercat='source $SCRIPT_DIR/EtherCAT.sh'

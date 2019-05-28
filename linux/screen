@@ -1,0 +1,12 @@
+
+# create session with name
+screen -S sessionname
+
+# detach
+#Ctrl+A, D 
+
+# reatach
+screen -r sessionname
+
+# multiple user
+screen -x

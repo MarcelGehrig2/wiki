@@ -1,0 +1,7 @@
+# https://github.com/junegunn/fzf#usage
+
+git clone https://github.com/junegunn/fzf
+
+cd ~/.fzf && git pull && ./install
+
+alias vv='vim $(fzf)

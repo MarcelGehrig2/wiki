@@ -12,7 +12,7 @@ SCRIPT_NAME=$(basename $SCRIPT_PATH)
 touch /tmp/runAsBoot
 touch ~/runAsBoot
 
-/home/mgehrig2/wiki/linux/scripts/inUse/startSynergy.sh
+#/home/mgehrig2/wiki/linux/scripts/inUse/startSynergy.sh
 /home/mgehrig2/wiki/linux/scripts/inUse/startVNC.sh
 
 
