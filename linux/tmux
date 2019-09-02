@@ -1,0 +1,11 @@
+# https://thoughtbot.com/blog/a-tmux-crash-course
+
+perfix = ctrl + b
+
+tmux attach
+
+(prefix + ")		horizontal split
+(prefix + %)		vertical split
+(prefix + arrow)	change pane
+
+(prefix " d)		detach
