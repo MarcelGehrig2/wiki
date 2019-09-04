@@ -3,8 +3,6 @@ STM32MP1
 STM32MP157		microprocessor, dual A7, one M4, 3D graphics
 STM32MP157C-DK2		discovery kit with LCD, Wifi, Bluetooth
 
-1..2 Cortex A7 + Cortex-M4
-
 * System Workbench for STM32 IDE (SW4STM32):	IDE for M4
  - /home/ubuntu/SystemWorkbench
 * STM32-CoPro-MPU:			plugin of System Workbench for MPU cortex-m
@@ -15,7 +13,7 @@ STM32MP157C-DK2		discovery kit with LCD, Wifi, Bluetooth
  - /home/ubuntu/STM32MPU/developerPkgSandbox/STM32MP15-Ecosystem-v1.0.0/Developer-Package/SDK
 
 #Sofware
-STM32MPU Embedded Software   =   
+STM32MPU Embedded Software   =   OpenSTLinux Distribution + STM32CubeMP1 Package
 Distro Linux:	OpenST Linux Distribution
 	https://wiki.st.com/stm32mpu/wiki/OpenSTLinux_distribution
 STM32CubeMP1:	BSP, HAL, midleware and apps in source
@@ -28,11 +26,19 @@ OpenSTLinux Distribution
 OP-TEE:		Open Portable Trusted Execution Environment 
 TF-A:		Trusted Firmware-A, first-stage boot loader for trusted stuff
 OpenAMP:	Open Asymmetric Multi Processing framework
-
+OpenEmbedded:	build framework for embedded Linux (Distribution builder)
+ - bitbake:	make-like build tool
+ - layer:	collection of recipes
+OpenEmbedded Core:	contains base layer of recipes, classes and associated files for many OpenEmbedded derived systems
+* Distribution Package contains:
+ - build framework based on OpenEmbedded
+ - OpenSTLinux distro including source code -> Cortex A
+ - STM32Cube MPU Package -> Cortex M  (integrated in OpenSTLinux)
 
 #Populate target with preprepared images
 https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK2/Let%27s_start/Populate_the_target_and_boot_the_image
-* install 'STM32_Programmer_CLI'
+* install 'STM32_Programmer_CLI'	'STM32CubeProgrammer'	"~/STM32-Tools/"
+* add installpath to PATH
 * check usb device port:	STM32_Programmer_CLI -l usb
 * program board:
  - both boot switches to off
@@ -43,7 +49,7 @@ https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK
 
 #Hello world in c
 https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK2/Develop_on_Arm%C2%AE_Cortex%C2%AE-A7/Create_a_simple_hello-world_application
-/home/ubuntu/STM32MPU/developerPkgSandbox/STM32MP15-Ecosystem-v1.0.0/Developer-Package
+"/home/ubuntu/STM32MPU/developerPkgSandbox/STM32MP15-Ecosystem-v1.0.0/Developer-Package/SDK"
 * install SDK
 * source preparation script
    "source SDK/environment-setup-cortexa7t2hf-neon-vfpv4-openstlinux_weston-linux-gnueabi"
@@ -69,6 +75,16 @@ https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK
 #install cortex-M4 firmware
 https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK2/Develop_on_Arm%C2%AE_Cortex%C2%AE-M4/Install_the_IDE
 * install System Workbench for STM32 IDE
-* 
+* start IDE:	"~/SystemWorkbench/eclipse"
+* examples:	"~/STM32MPU/developerPkgSandbox/STM32MP15-Ecosystem-v1.0.0/Developer-Package/STM32Cube_FW_MP1_V1.0.0/Projects/STM32MP157C-DK2"
+
+
+#tools on board
+* stop firmware:	echo stop > /sys/class/remoteproc/remoteproc0/state
+* output log firmware:	cat /sys/kernel/debug/remoteproc/remoteproc0/trace0
+
+
+
+
 
 
