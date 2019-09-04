@@ -11,9 +11,9 @@ $script_dir/fixes.sh
 $script_dir/toolchains.sh
 $script_dir/tools.sh
 $script_dir/gitPrivate.sh
-$script_dir/multimedia.sh
+#$script_dir/multimedia.sh
 $script_dir/dict.sh
-$script_dir/latex.sh
+#$script_dir/latex.sh
 #$script_dir/ros.sh
 
 #add myBashrc.sh to home/.bashrc

@@ -1,0 +1,8 @@
+y	yank copy
+p	paste
+o	append line
+
+gg	mv first line
+$	mv end line
+
+"+p	paste from clipboard
