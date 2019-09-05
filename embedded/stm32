@@ -93,7 +93,7 @@ https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK
 
 
 ##Distribution Package
-#Install Linux Distro
+#Build (bake) a Linux Distro
 https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 * "cd <working directory path>/Distribution-Package"
 * "mkdir openstlinux-4.19-thud-mp1-19-02-20 "
@@ -103,6 +103,32 @@ https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 * "DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh"
 * "bitbake st-image-weston"
  - bitbake cheat sheet:		"https://wiki.st.com/stm32mpu/wiki/BitBake_cheat_sheet"
+#create a new layer
+https://wiki.st.com/stm32mpu/wiki/How_to_create_a_new_open_embedded_layer
+* allways create a own custom layer for modifications on distro
+* a layer contains one or more recipes
+* a layer on top of another layer can overlay receips of the bottom layer 
+* bitbake-layers
+* source envsetup
+* "bitbake-layers --help"
+* "bitbake-layers create-layer --priority 7 ../meta-st/meta-my-custo-layer"
+* "bitbake-layers add-layer ../meta-st/meta-my-custo-layer/"
+ 
+#devtool
+https://wiki.st.com/stm32mpu/wiki/OpenEmbedded_-_devtool
+* change to build dir
+* mkdir mysources/myapp
+* cp sources to mysources/myapp
+* "devtool add myapp mysources/myapp"
+* "devtool build myapp"
+* "devtool deploy-target myapp root@<ip of board>"
+* custo layer has to already exist
+* "mkdir ../meta-st/meta-my-custo-layer/recipes-custom/myapp"
+* "cp workspace/recipes/myapp/myapp.bb ../meta-st/meta-my-custo-layer/recipes-custom/myapp"
+* "mkdir ../meta-st/meta-my-custo-layer/recipes-custom/myapp/myapp"
+* "cp mysources/myapp/* ../meta-st/meta-my-custo-layer/recipes-custom/myapp/myapp"
+* "cp <appropriated license file> ../meta-st/meta-my-custo-layer/recipes-custom/myapp/myapp"
+
 #create Starter- and Developer package
 https://wiki.st.com/stm32mpu/index.php?title=STM32MP1_Distribution_Package#Generating_your_own_Starter_and_Developer_Packages
 * Modify the build-<distro>-<machine>/conf/local.conf file to enable archiver
