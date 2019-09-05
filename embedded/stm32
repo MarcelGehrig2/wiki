@@ -30,21 +30,28 @@ OpenEmbedded:	build framework for embedded Linux (Distribution builder)
  - bitbake:	make-like build tool
  - layer:	collection of recipes
 OpenEmbedded Core:	contains base layer of recipes, classes and associated files for many OpenEmbedded derived systems
+* Folder structure:	stm32mp1-openstlinux-4.19-thud-mp1-19-02-20
+* Developer Package contains:
+ - Source for:		Linux-Kernel, U-Boot, TF-A, OP-TEE OS
+ - Debug symbols
+ - SDK for crossdevelompment Cortex A
+ - STM32CUBE MPU Package for development Cortex M
 * Distribution Package contains:
  - build framework based on OpenEmbedded
  - OpenSTLinux distro including source code -> Cortex A
  - STM32Cube MPU Package -> Cortex M  (integrated in OpenSTLinux)
+STM32MP15-Ecosystem-v1.0.0:	one software version of the Distribution Package, used to generate the same version Starter Package and Developer Package
 
-#Populate target with preprepared images
+#Flash target with preprepared images
 https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK2/Let%27s_start/Populate_the_target_and_boot_the_image
 * install 'STM32_Programmer_CLI'	'STM32CubeProgrammer'	"~/STM32-Tools/"
 * add installpath to PATH
 * check usb device port:	STM32_Programmer_CLI -l usb
 * program board:
- - both boot switches to off
+ - both boot switches to off (forced USB boot)
  - reset board
  - STM32_Programmer_CLI -c port=usb1 -w flashlayout_st-image-weston/FlashLayout_sdcard_stm32mp157c-dk2-trusted.tsv
- - both boot switches to on
+ - both boot switches to on (SD boot)
  - reset
 
 #Hello world in c
@@ -84,6 +91,23 @@ https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK
 * output log firmware:	cat /sys/kernel/debug/remoteproc/remoteproc0/trace0
 
 
+
+##Distribution Package
+#Install Linux Distro
+https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
+* "cd <working directory path>/Distribution-Package"
+* "mkdir openstlinux-4.19-thud-mp1-19-02-20 "
+* "cd openstlinux-4.19-thud-mp1-19-02-20"
+* "repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/openstlinux-4.19-thud-mp1-19-02-20"
+* "repo sync"
+* "DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh"
+* "bitbake st-image-weston"
+ - bitbake cheat sheet:		"https://wiki.st.com/stm32mpu/wiki/BitBake_cheat_sheet"
+#create Starter- and Developer package
+https://wiki.st.com/stm32mpu/index.php?title=STM32MP1_Distribution_Package#Generating_your_own_Starter_and_Developer_Packages
+* Modify the build-<distro>-<machine>/conf/local.conf file to enable archiver
+ - "ST_ARCHIVER_ENABLE = "1"
+ - disable this option, if you don't create a package
 
 
 

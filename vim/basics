@@ -1,8 +1,9 @@
 y	yank copy
-p	paste
-o	append line
-
+x       delete one char
 gg	mv first line
 $	mv end line
+123G    go to line 123
 
 "+p	paste from clipboard
+"+yy    copy line to clipboard
+
