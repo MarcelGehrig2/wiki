@@ -90,7 +90,9 @@ https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP1_boards/STM32MP157C-DK
 * stop firmware:	echo stop > /sys/class/remoteproc/remoteproc0/state
 * output log firmware:	cat /sys/kernel/debug/remoteproc/remoteproc0/trace0
 
-
+#yocto
+* one recipe for one package
+ - fetch source from url, check dependencies, configures, defines target location
 
 ##Distribution Package
 #Build (bake) a Linux Distro
@@ -101,11 +103,12 @@ https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package
 * "repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/openstlinux-4.19-thud-mp1-19-02-20"
 * "repo sync"
 * "DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh"
-* "bitbake st-image-weston"
+* "bitbake -k st-image-weston"   -k = build proceeds even if error (good for long builds like this ~6h)
  - bitbake cheat sheet:		"https://wiki.st.com/stm32mpu/wiki/BitBake_cheat_sheet"
 #create a new layer
 https://wiki.st.com/stm32mpu/wiki/How_to_create_a_new_open_embedded_layer
 * allways create a own custom layer for modifications on distro
+* files have 'meta-' prefix
 * a layer contains one or more recipes
 * a layer on top of another layer can overlay receips of the bottom layer 
 * bitbake-layers
@@ -113,7 +116,37 @@ https://wiki.st.com/stm32mpu/wiki/How_to_create_a_new_open_embedded_layer
 * "bitbake-layers --help"
 * "bitbake-layers create-layer --priority 7 ../meta-st/meta-my-custo-layer"
 * "bitbake-layers add-layer ../meta-st/meta-my-custo-layer/"
- 
+#modify existing library or application
+https://wiki.st.com/stm32mpu/wiki/OpenEmbedded_-_devtool#modify_an_existing_application_or_library_managed_by_a_recipe_on_which_you_have_the_ownership
+* in build folder
+* "mkdir mysources"
+* "devtool modify -x libsmaf mysources/libsmaf"   -x = extract soruces
+* make modifications in source
+* "devtool build libsmaf"
+#bitbake tips
+https://wiki.st.com/stm32mpu/wiki/OpenEmbedded#Bitbake_tips
+* "bitbake -s"      get list of recipes
+* "bitbake -c populate_sdk <imagename>"     generates SDK for image
+#customize kernel
+https://wiki.st.com/stm32mpu/wiki/How_to_customize_the_Linux_kernel
+* source env script
+* "devtool modify virtual/kernel"
+* "bitbake virtual/kernel -c menuconfig"
+* "bitbake virtual/kernel"
+* "scp <build dir>/tmp-glibc/deploy/images/<machine name>/uImage root@<board ip address>:/boot"
+* reboot board.     Board $> cd /boot; sync; systemctl reboot
+* to make changes permanent on repo:
+ - save changes in in a configuration fragment file (fragment-*.config) based on fragment.cfg file, and the Linux kernel configuration/compilation steps must be re-executed: bitbake <name of kernel recipe>.
+
+//  * "touch ../meta-my-custo-layer/recipes-kernel/linux/<name of kernel recipe>.bbappend"
+//  * "bitbake <name of kernel recipe> -c menuconfig"
+
+
+#create a new recipe
+https://www.yoctoproject.org/docs/current/dev-manual/dev-manual.html#new-recipe-writing-a-new-recipe
+* 
+
+
 #devtool
 https://wiki.st.com/stm32mpu/wiki/OpenEmbedded_-_devtool
 * change to build dir
@@ -135,6 +168,23 @@ https://wiki.st.com/stm32mpu/index.php?title=STM32MP1_Distribution_Package#Gener
  - "ST_ARCHIVER_ENABLE = "1"
  - disable this option, if you don't create a package
 
-
+#where is what. example to finde source in recipe jungle. Linux Kernel
+* "repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/openstlinux-4.19-thud-mp1-19-02-20;repo sync"
+ - checks out oe-manifes.git from st-repository
+ - this manifest contains multiple repos with exact version numbers and paths where to extract to
+ - 'repo sync' clones all these repos (around 10)
+ - from oe-manifest/default.xml: '<project name="meta-st-stm32mp" path="layers/meta-st/meta-st-stm32mp" revision="dcc955d6992cc46ce07440caaa5a17942776bbe6"/>'
+  ° remote="meta-st-stm32mp"            is omitted because this remote is the default
+  ° name="meta-st-stm32mp"      name of the repo
+  ° path="..."                      path where to clone to
+  ° revision="..."                  exact revision
+* "layers/meta-st/meta-st-stm32mp" contains all meta data (including kernel recipes) for the stm32mp
+* "layers/meta-st/meta-st-stm32mp/recipes-kernel/linux/linux-stm32mp_4.19"      the kernel recipe
+ - 'SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.9.tar.xz"'       ULR to kernel source packed as tar
+ - 'SRC_URI += " \ ....'            adds patches to source list
+ - the patches are in a subfolder of the recipe (cloned at the same time as the recipe"
+ - 'KERNEL_DEFCONFIG        = "multi_v7_defconfig"'     kernel defconfig
+ - 'KERNEL_CONFIG_FRAGMENTS += "..."'                   adds kernel config fragments (patches for kernel config)
+* see "#customize kernel" how to customize config and source code both temporaly and permanent
 
 
