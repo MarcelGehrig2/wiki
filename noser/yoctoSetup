@@ -1,5 +1,14 @@
 
 
 
-sudo apt install -y python3-distutils texinfo gawk chrpath
+sudo apt install -y python3-distutils texinfo gawk chrpath libboost-all-dev
+
+* if usingu ubuntu apply 'patchBitbake_gitProblem'
+
+repo init -u ssh://nosercloud@vs-ssh.visualstudio.com:22/Repower/_ssh/SM_platform
+repo sync
+
+TEMPLATECONF=`pwd`/sources/meta-repower/templateconf
+source sources/poky/oe-init-build-env
+MACHINE=rpwr-s2 bitbake -k core-image-repower-swu
 

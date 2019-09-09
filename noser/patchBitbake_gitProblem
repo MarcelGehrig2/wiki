@@ -1,0 +1,20 @@
+#https://patchwork.openembedded.org/patch/145072/
+
+/home/ubuntu/repower/yocto/sources/poky/bitbake/lib/bb/fetch2/git.py
+
+
+
+
+diff --git a/lib/bb/fetch2/git.py b/lib/bb/fetch2/git.py
+index 2550bde8..7442f844 100644
+--- a/lib/bb/fetch2/git.py
++++ b/lib/bb/fetch2/git.py
+@@ -326,7 +326,7 @@  class Git(FetchMethod):
+                 branchname =  ud.branches[ud.names[0]]
+                 runfetchcmd("%s checkout -B %s %s" % (ud.basecmd, branchname, \
+                             ud.revisions[ud.names[0]]), d, workdir=destdir)
+-                runfetchcmd("%s branch --set-upstream %s origin/%s" % (ud.basecmd, branchname, \
++                runfetchcmd("%s branch %s --set-upstream-to origin/%s" % (ud.basecmd, branchname, \
+                             branchname), d, workdir=destdir)
+             else:
+                 runfetchcmd("%s checkout %s" % (ud.basecmd, ud.revisions[ud.names[0]]), d, workdir=destdir)
