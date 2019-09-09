@@ -17,7 +17,8 @@ $script_dir/dict.sh
 #$script_dir/ros.sh
 
 #add myBashrc.sh to home/.bashrc
-echo ". ~/wiki/linux/scripts/inUse/myBashrcPrivate.sh" >> ~/.bashrc
+cat "" >> ~./bashrc
+cat "source ~/wiki/linux/scripts/inUse/myBashrcPrivate.sh" >> ~/.bashrc
 
 cp -p $script_dir/files/Templates/* ~/Templates/
 

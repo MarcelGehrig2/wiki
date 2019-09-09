@@ -1,0 +1,5 @@
+
+
+
+sudo apt install -y python3-distutils texinfo gawk chrpath
+

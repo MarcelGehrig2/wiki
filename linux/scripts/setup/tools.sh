@@ -9,7 +9,8 @@ sudo apt-get -y install tree
 sudo apt-get -y install putty
 sudo apt-get -y install pv      # progress bar for pipe
 sudo apt-get -y install nautilus-open-terminal
-
+sudo apt-get -y install vim-gtk3
+sudo apt-get -y install repo
 
 #VNC
 sudo apt-get -y install x11vnc
@@ -21,7 +22,7 @@ sudo apt-get -y install kdevelop
 
 
 # ssh
-sudo apt-get -y install openssh-server openssh-client
+sudo apt-get -y install openssh-client
 
 
 # synergy

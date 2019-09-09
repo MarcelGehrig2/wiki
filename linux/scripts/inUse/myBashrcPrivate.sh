@@ -105,3 +105,8 @@ alias ssh1='ssh ubuntu@pcwinf039-linux'
 source $SCRIPT_DIR/wiki.sh
 
 
+mc ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
