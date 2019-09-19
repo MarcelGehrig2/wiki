@@ -1,0 +1,4 @@
+* mosquitto       local mqtt broker
+ - /et/mosquitto/mosquitto.conv
+ - sudo /etc/init.d/mosquitto start
+ - mosquitto -p 1883                    start mosquitto and listen to port 1833

@@ -1,0 +1,14 @@
+// dlms
+// ////////////////////////////////////////////////7
+
+// https://icube.ch/DLMSSurvivalKit/dsk1.html
+
+
+* HDLC -> negotiating and builds a logical connection
+ - segments long data into i-Frames
+ -  verifies frames using CRCs
+ - monitor timeouts
+ - HDLC-address = MAC address
+   { address of the logical device,
+     address of the physical device} 	// ommited in point-to-point connection
+ - client address 16 = public client

@@ -10,5 +10,6 @@ repo sync
 
 TEMPLATECONF=`pwd`/sources/meta-repower/templateconf
 source sources/poky/oe-init-build-env
+
 MACHINE=rpwr-s2 bitbake -k core-image-repower-swu
 
