@@ -3,12 +3,69 @@
 
 // https://icube.ch/DLMSSurvivalKit/dsk1.html
 
-
-* HDLC -> negotiating and builds a logical connection
+* LD = Logic Device
+ - address = 1 		-> management device
+ - address > 1		-> other logical devices (gas, energy ...)
+ - contains COSEM objects
+   - COSEM objects contain attributes and methodes
+   - first attribute is Logical Name (OBIS code)
+* SN = short name (16-bit)
+* LN = Logical name (OBIS-code)
+* Each logical device contains at least one object of class:
+ - Association-Object LN (OBIS) or Association-Object SN (16-bit identifier).
+   - attribute 2 = 0.0.40.0.0.255. = object list
+   - base name (VaaName) = ''FA00''
+* HDLC layer
+ - negotiating and builds a logical connection
  - segments long data into i-Frames
  -  verifies frames using CRCs
  - monitor timeouts
  - HDLC-address = MAC address
    { address of the logical device,
-     address of the physical device} 	// ommited in point-to-point connection
+     address of the physical device} 	// can sometimes be ommited in point-to-point connection
  - client address 16 = public client
+  - 1 byte		only logical address
+  - 2 bytes		1 byte logical, 1 byte physical
+  - 4 bytes		2 byte logical, 2 byte physical
+* Frames.
+ - SNRM-frame 
+ - UA-frame
+ - I-frame
+* APDUs  (Application protocol data units) are the DLMS/COSEM messages that are sent from client to the meter and vice-versa
+* Application layer
+ - uses ASN.1 notation or XML notation
+ - ReadRequest element
+ - PDU (protocol data unit) encoding for byte sequence
+ - AssociationRequest		establishes the connection
+ - LN = logical name reference; referenced by the logical name (OBIS code).
+  - Get/Set
+ - SN = short name reference; 16 bit integer
+  - Read/Write
+ - The Proposed Dlms Version Number = 6
+* Negotiation
+ - <AssociationRequest> proposal from client
+   - ApplicationContexName Value		SN / LN
+   - ProposedConformance				Write / Read / Set / Get
+   - ProposedMaxPduSize					FFFF 	client has no limit for PDU size
+ - <AssociationResponse> accepted capabilities
+* Scaler unit
+ - first element: power of 10 (signed int)		i.e. "FF" = -1
+ - second element: measureing unit				i.e. "1E" = Wh	(according to the Blue Book table 4 p.47)
+
+* HDLC part
+ - send  	SNRM 	93	Set normal response mode
+ - get 		UA 		73
+* DLMS/COSEM Part
+ - send		AARQ	10	Application Association Request 
+ - get		AARE	30	Application Association Response
+
+* COSEM Objects
+ - different classes of objects (interface classes (IC)) 
+   - 1		Data
+   - 3 		Register
+   - 7		Profile generic
+   - full list in Blue Book or confluence.noser
+
+ * [0, 0, 1, 0, 0, 255]		clock
+ * [0.0.40.0.0.255]			object list (visible COSEM objects)
+ * [0.0.41.0.0.255]			list of logical devices and SAP addresses
