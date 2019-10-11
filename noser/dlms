@@ -1,7 +1,14 @@
 // dlms
 // ////////////////////////////////////////////////7
 
+// https://www.tutorialspoint.com/high-level-data-link-control-hdlc
 // https://icube.ch/DLMSSurvivalKit/dsk1.html
+// https://confluence.noser.com/pages/viewpage.action?pageId=117639760
+
+* HDLC	transports PDU from sender to receiver (HDLC contains sender/receiver address)
+* PDU	Ptrotocoll Data Units
+* DLSM
+* OBIS	code 1.8.0 equeals load counter
 
 * LD = Logic Device
  - address = 1 		-> management device
@@ -28,9 +35,9 @@
   - 2 bytes		1 byte logical, 1 byte physical
   - 4 bytes		2 byte logical, 2 byte physical
 * Frames.
- - SNRM-frame 
- - UA-frame
- - I-frame
+ - I-frame (user data)	transport user data from the network layer. In addition they can also include flow and error control information piggybacked on data.
+ - S-frame (control)	are used for flow and error control whenever piggybacking is impossible or inappropriate
+ - U-frame 				are used for various miscellaneous purposes, including link management
 * APDUs  (Application protocol data units) are the DLMS/COSEM messages that are sent from client to the meter and vice-versa
 * Application layer
  - uses ASN.1 notation or XML notation
