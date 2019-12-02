@@ -46,6 +46,8 @@ alias restartNetwork='sudo service network-manager restart'
 
 alias restartCinnamon='$SCRIPT_DIR/restartCinnamon.sh'
 alias fucking='sudo'
+alias fuck='sudo $(history -p !!)'
+alias redo='sudo $(history -p !!)'
 
 alias nano='nano -u --smooth --smarthome --const --autoindent'
 
@@ -64,7 +66,7 @@ alias ln='ln -i'
 alias gitc='git s; git add --all; echo "### git commit ###"; git commit -m "commit"; git s'   #quick commit
 alias gitp='git pull; gitc; git s; git push'    #quick pull, commit and push
 alias gitstore='git config credential.helper store'
-source ~/git-completion.bash
+source ~/wiki/linux/scripts/inUse/git-completion.bash
 
 # myEnv
 #alias myEnvArm2='source $SCRIPT_DIR/myEnv/envArm.sh'
@@ -87,20 +89,6 @@ alias ssh1='ssh ubuntu@pcwinf039-linux'
 #alias ethercat='source $SCRIPT_DIR/EtherCAT.sh'
 
 
-# ROS
-#source $SCRIPT_DIR/ROS.sh
-#alias sshturtle='ssh kobuki@146.136.59.23'
-
-#source $SCRIPT_DIR/vt2.sh
-
-
-#alias sshmain0='ssh mainpc0@mainpc0'
-#alias sshmain0ip='ssh mainpc0@146.136.56.119'
-#alias sshmainpcp='ssh mainpcp@146.136.39.214 -p 9022'
-
-
-# chair stuff
-#source $SCRIPT_DIR/myBashrcChair.sh
 
 source $SCRIPT_DIR/wiki.sh
 

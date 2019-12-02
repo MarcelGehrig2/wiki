@@ -46,21 +46,19 @@ sudo apt-get -y install terminator
 mkdir -p ~/.config/terminator
 cp -p $script_dir/files/configTerminator ~/.config/terminator/config
 
-# unetboot
-sudo add-apt-repository ppa:gezakovacs/ppa
-sudo apt-get update
-sudo apt-get -y install unetbootin
-sudo apt-get -y install extlinux
-
-
-# grub customizer
-sudo add-apt-repository -y ppa:danielrichter2007/grub-customizer -y
-sudo apt-get update
-sudo apt-get -y install grub-customizer
 
 # gparted
 sudo apt-get -y install gparted
 
 
 # screen
-sudo apt get -y install -y screeen
+sudo apt-get -y install -y screen
+
+
+# java
+# sudo apt-get -y install default-jre
+# sudo apt-get -y install default-jdk
+# sudo apt-get -y install openjfx
+
+sudo add-apt-repository ppa:webupd8team/java
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
