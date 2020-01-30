@@ -12,14 +12,47 @@ SCRIPT_NAME=$(basename $SCRIPT_PATH)
 
 source ~/docker/dalias
 
+
+## To automatically accept ECDSA fingerprint
+## https://askubuntu.com/questions/123072/ssh-automatically-accept-keys
+##  sudo nano ~/.ssh/config
+# Host 10.24.128.66 
+#    Hostname 10.24.128.66
+#    StrictHostKeyChecking no
+
 # alias
 # #####
 
-alias sshsmd='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R 10.24.128.66 && ssh debuguser@10.24.128.66'
-alias sshsm='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R 10.24.128.66 && ssh root@10.24.128.66'
+IP_SM="10.24.128.66"
+
+alias sshsmd='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R $IP_SM && ssh debuguser@$IP_SM'
+alias sshsmr='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R $IP_SM && ssh root@$IP_SM'
+alias sshsm='sshsmr'
+alias sshsmwait='while ! sshsm
+					do
+					    echo "Trying again..."
+					done'
 alias sshvm='ssh -c aes256-cbc marcel@10.24.128.1'
 alias lsu='ls /dev/ttyU*'
 
+alias cplogslocal='cp /tmp/rs485:1.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_mg.log && rm /tmp/rs485:1.log'
+alias cplogssm='scp debuguser@10.24.128.66:/tmp/rs485:1.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_sm.log'
 
 
+BASHRC_PATH_TARGET="/home/root/.bashrc"
 
+alias sminit="
+				sshsmwait;
+			  	scp $SCRIPT_DIR/myBashrcSM.sh root@$IP_SM:$BASHRC_PATH_TARGET;
+
+			  	ssh root@$IP_SM '
+			  					sudo chmod +x $BASHRC_PATH_TARGET
+			  					source $BASHRC_PATH_TARGET;
+			  				   	touch /tmp/rs485:1.log;			
+			                   	chown smartuser:smartuser /tmp/rs485:1.log;
+			                   	touch /tmp/rs485:2.log;			
+			                   	chown smartuser:smartuser /tmp/rs485:2.log;		
+			                   	sudo mount -o remount,rw /provisioning/;			
+			                   	';
+
+			  	sshsm"

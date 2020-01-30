@@ -77,6 +77,8 @@ source ~/wiki/linux/scripts/inUse/git-completion.bash
 # hibernate
 alias hn='cinnamon-screensaver-command -l && sudo hibernate'
 
+# reload .bashrc
+alias rlbrc='source ~/.bashrc'
 
 
 # vim
