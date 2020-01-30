@@ -1,6 +1,6 @@
 sudo apt install apache2
 
-sudo subl /etc/apache2/sites-available/subl 000-default.conf
+sudo subl /etc/apache2/sites-available/000-default.conf
 
 
 

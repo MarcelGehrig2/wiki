@@ -5,6 +5,9 @@
 // https://icube.ch/DLMSSurvivalKit/dsk1.html
 // https://confluence.noser.com/pages/viewpage.action?pageId=117639760
 
+* SAP    Service Access Point
+
+
 * HDLC	transports PDU from sender to receiver (HDLC contains sender/receiver address)
 * PDU	Ptrotocoll Data Units
 * DLSM

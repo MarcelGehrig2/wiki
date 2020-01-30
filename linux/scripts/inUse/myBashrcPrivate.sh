@@ -74,6 +74,10 @@ source ~/wiki/linux/scripts/inUse/git-completion.bash
 # myEnv alias
 #alias myEnvBuildroot='source $SCRIPT_DIR/myEnv/buildroot.sh'
 
+# hibernate
+alias hn='cinnamon-screensaver-command -l && sudo hibernate'
+
+
 
 # vim
 alias vv='vim $(fzf)'

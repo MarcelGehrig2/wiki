@@ -15,6 +15,11 @@ source ~/docker/dalias
 # alias
 # #####
 
-## Colorize the ls output ##
-alias sshsm='ssh debuguser@10.24.128.66'
+alias sshsmd='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R 10.24.128.66 && ssh debuguser@10.24.128.66'
+alias sshsm='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R 10.24.128.66 && ssh root@10.24.128.66'
 alias sshvm='ssh -c aes256-cbc marcel@10.24.128.1'
+alias lsu='ls /dev/ttyU*'
+
+
+
+

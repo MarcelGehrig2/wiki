@@ -13,6 +13,15 @@
 // * dereferencing a std::shared_ptr is no more expensive than dereferencing a raw pointer
 // * std::shared_ptrs can't be used to point to arrays, but std::unique_ptr can be used
 
+// Use make_shared function when possible.
+auto sp1 = make_shared<Song>(L"The Beatles", L"Im Happy Just to Dance With You");
+
+// When initialization must be separate from declaration, e.g. class members, 
+// initialize with nullptr to make your programming intent explicit.
+shared_ptr<Song> sp5(nullptr);
+//Equivalent to: shared_ptr<Song> sp5;
+sp5 = make_shared<Song>(L"Elton John", L"I'm Still Standing");
+
 
 // memory ---------------------------------------------------------------------
 // * a std::shared_ptr object is two pointers in size
