@@ -1,0 +1,7 @@
+// store public key on 213.158.154.197 = rpb013
+
+
+ssh smart_user@213.158.154.197 -p 51122
+
+ssh -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@ip
+ssh -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@10.64.70.105

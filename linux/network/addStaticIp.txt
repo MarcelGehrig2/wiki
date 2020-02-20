@@ -1,0 +1,12 @@
+
+
+
+
+// show
+ip a
+
+
+// add static ip with netmask 255.255.255.0 (24)
+ip addr add 10.0.0.3/24 dev enp4s0
+
+

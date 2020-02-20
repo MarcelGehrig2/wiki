@@ -35,8 +35,10 @@ alias sshsmwait='while ! sshsm
 alias sshvm='ssh -c aes256-cbc marcel@10.24.128.1'
 alias lsu='ls /dev/ttyU*'
 
-alias cplogslocal='cp /tmp/rs485:1.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_mg.log && rm /tmp/rs485:1.log'
-alias cplogssm='scp debuguser@10.24.128.66:/tmp/rs485:1.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_sm.log'
+LOG_PATH="/home/marcel/repower/notes/logs"
+alias cplogslocal='cp /tmp/rs485:1.log $LOG_PATH/$(date +"%Y%m%d_%H%M%S")_mg.log && rm /tmp/rs485:1.log'
+alias cplogssm='scp debuguser@10.24.128.66:/tmp/rs485:1.log $LOG_PATH/$(date +"%Y%m%d_%H%M%S")_sm.log'
+alias cdlogdir='cd $LOG_PATH'
 
 
 BASHRC_PATH_TARGET="/home/root/.bashrc"

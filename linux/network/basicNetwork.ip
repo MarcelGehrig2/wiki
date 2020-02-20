@@ -1,0 +1,26 @@
+
+
+
+// ARP
+address resolution protocoll
+who has this ip? give me your mac
+
+//  wireshark:
+8743	792.127988238	AsustekC_05:13:81	Broadcast	ARP	42	Who has 10.24.128.1? Tell 10.24.129.227
+
+
+
+
+
+traceroute 4.4.4.4
+traceroute www.noser.com
+
+
+
+nmap
+
+
+
+// rounting table
+apt install net-tools
+netstat -rn
