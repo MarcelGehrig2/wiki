@@ -1,0 +1,19 @@
+
+//before bitbake
+export IMAGE_VERSION="9.9"
+export IMAGE_BUILD_NUMBER="34"
+export BB_ENV_EXTRAWHITE="${BB_ENV_EXTRAWHITE} IMAGE_VERSION IMAGE_BUILD_NUMBER"
+MACHINE=rpwr-s2 bitbake core-image-repower-debug-swu
+
+// load on test SM and check build version
+cat /etc/build 
+
+
+// login to https://prod.smartpower.ch/provisioning/index.html
+BN: Smartpower_admin@noser.com
+
+
+
+
+
+ssh -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key root@172.17.1.142

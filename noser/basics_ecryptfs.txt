@@ -1,0 +1,46 @@
+
+sudo dmidecode | grep -w UUID | sed "s/^.UUID\: //g"
+
+
+
+// ecryptfs
+http://dubeyko.com/development/FileSystems/eCryptfs/ecryptfs.pdf
+
+
+ * TPM         Trustet Platform Module
+ * Kernel Keyring
+ * GnuPG Keyring
+ * PAM         Pluggable Authentication Module
+ * PKI         Public Key Infrastructure
+ * eCryptfs offers a pluggable Public Key Infras-tructure (PKI)
+ * eCryptfs   includes   a   PKI   module   that   utilizes the GnuPG Made Easy (GPGME)
+* The  eCryptfs  TPM  PKI  module  utilizes  theTrouSerS (http://sourceforge.net/projects/trousers/)  interface  to  communicate  withthe Trusted Platform Module
+ * Key from a SmarCard or USB can be uses
+
+
+* login passfrase       human readable passfrase
+* mount passphrase      should be auto generated
+
+
+// ecryptfs-utils
+/////////////////
+https://wiki.archlinux.org/index.php/ECryptfs
+
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="sumo"/>
+
+// create a new crypted folder
+ecryptfs-setup-private --nopwcheck --noautomount
+
+
+// move crypted folder
+$ mv ~/Private /path/to/new/folder
+$ echo /path/to/new/folder > ~/.ecryptfs/Private.mn
+
+
+// encrypt home folder
+modprobe ecryptfs
+ecryptfs-migrate-home -u username
+
+
+
+ # CONFIG_ECRYPT_FS

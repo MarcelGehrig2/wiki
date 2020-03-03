@@ -58,3 +58,10 @@ alias sminit="
 			                   	';
 
 			  	sshsm"
+
+
+alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd1    |rnet|\n"'
+alias usbadd1='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.1; sleep 0.3; lsu'
+alias usbadd2='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.2; sleep 0.3; lsu'
+alias usbadd3='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.3; sleep 0.3; lsu'
+alias usbadd4='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.4; sleep 0.3; lsu'

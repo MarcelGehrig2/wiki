@@ -1,0 +1,29 @@
+
+
+
+// kernel config of the built kernel
+// ////////////////////////
+/home/marcel/repower/yocto/build/deploy/images/rpwr-s2/zImage.config
+
+
+// add custom kernel config
+// ////////////////////////
+1. Add "ECryptFs.cfg" to /home/marcel/repower/yocto/sources/meta-repower/recipes-kernel/linux/rpwr-s2
+    CONFIG_ECRYPT_FS=y
+2. Add filename to /home/marcel/repower/yocto/sources/meta-repower/recipes-kernel/linux/linux-mainline_%.bbappend
+    file://ECryptFs.cfg \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

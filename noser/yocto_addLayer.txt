@@ -1,0 +1,26 @@
+
+
+// add new meta layer
+// //////////////////
+1. Add meta repo to RepoTool (see yocto_gitRepoTool.txt)
+2. repo sync
+3. Add layer to the local config (will not be synced to remote, only local change)
+    /home/marcel/repower/yocto/build/conf/bblayers.conf
+    BBLAYERS += "${OEROOT}/../meta-security"
+4. Add layer to the templateconf
+    /home/marcel/repower/yocto/sources/meta-repower/templateconf/bblayers.conf.sample
+    BBLAYERS += "${OEROOT}/../meta-security"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

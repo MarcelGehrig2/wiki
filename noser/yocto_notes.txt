@@ -1,0 +1,6 @@
+
+
+https://wiki.yoctoproject.org/wiki/Releases
+Codename 	Yocto Project Version 	Release Date 	Current Version 	Support Level 	Poky Version 	BitBake branch
+Sumo 	2.5 	April 2018 	2.5.3 	Community 	19.0 	1.38 
+Morty 	2.2 	Nov 2016 	2.2.4 	Community 	16.0 	1.32 

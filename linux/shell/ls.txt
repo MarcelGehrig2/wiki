@@ -1,0 +1,7 @@
+
+
+// sort by access
+ls -altu
+
+// sort by modification time
+ls -alt
