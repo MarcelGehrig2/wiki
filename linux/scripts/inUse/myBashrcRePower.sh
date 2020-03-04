@@ -60,8 +60,14 @@ alias sminit="
 			  	sshsm"
 
 
-alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd1    |rnet|\n"'
-alias usbadd1='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.1; sleep 0.3; lsu'
-alias usbadd2='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.2; sleep 0.3; lsu'
-alias usbadd3='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.3; sleep 0.3; lsu'
-alias usbadd4='lsu; sudo usbip attach -r 10.24.129.240 -b 1-1.4; sleep 0.3; lsu'
+IP_RASPBERRY="10.24.129.240"
+alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd2    |rnet|\n\n"; sudo usbip list -r $IP_RASPBERRY; printf "\n usbsub0, usbsub1 ...\n\n"; lsu' 
+alias usbadd1='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.1 && sleep 0.5; lsu'
+alias usbadd2='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.2 && sleep 0.5; lsu'
+alias usbadd3='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.3 && sleep 0.5; lsu'
+alias usbadd4='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.4 && sleep 0.5; lsu'
+alias usbsub0='lsu; sudo sudo usbip detach -p 0 # 00 && sleep 0.5; lsu'
+alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu'
+alias usbsub2='lsu; sudo sudo usbip detach -p 2 # 00 && sleep 0.5; lsu'
+alias usbsub3='lsu; sudo sudo usbip detach -p 3 # 00 && sleep 0.5; lsu'
+
