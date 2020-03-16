@@ -1,7 +1,7 @@
 
 //before bitbake
 export IMAGE_VERSION="9.9"
-export IMAGE_BUILD_NUMBER="36"
+export IMAGE_BUILD_NUMBER="37"
 export BB_ENV_EXTRAWHITE="${BB_ENV_EXTRAWHITE} IMAGE_VERSION IMAGE_BUILD_NUMBER"
 MACHINE=rpwr-s2 bitbake core-image-repower-debug-swu
 

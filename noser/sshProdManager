@@ -9,8 +9,11 @@ ssh -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@10.64.70.10
 
 //SWCHSM.00005.00098
 ssh -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142
+scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142:/tmp/rs485:*.log /tmp/
 scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142:/home/smartuser/smartpower/SM_DB.db /tmp
 
-scp -P 51122 smart_user@213.158.154.197:/tmp/SM_DB.db ./
 
-scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142:/tmp/rs485:2.log /tmp/
+// copy logs from SWCHSM.5.98
+scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142:/tmp/rs485:*.log /tmp/
+  // copyLogSennwald.sh
+  scp -P 51122  smart_user@213.158.154.197:/tmp/rs485:*.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_smSennwald.log~

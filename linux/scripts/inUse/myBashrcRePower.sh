@@ -25,8 +25,8 @@ source ~/docker/dalias
 
 IP_SM="10.24.128.66"
 
-alias sshsmd='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R $IP_SM && ssh debuguser@$IP_SM'
-alias sshsmr='ssh-keygen -f "/home/marcel/.ssh/known_hosts" -R $IP_SM && ssh root@$IP_SM'
+alias sshsmd='ssh -o StrictHostKeyChecking=no debuguser@$IP_SM'
+alias sshsmr='ssh -o StrictHostKeyChecking=no root@$IP_SM'
 alias sshsm='sshsmr'
 alias sshsmwait='while ! sshsm
 					do
@@ -61,13 +61,16 @@ alias sminit="
 
 
 IP_RASPBERRY="10.24.129.240"
-alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd2    |rnet|\n\n"; sudo usbip list -r $IP_RASPBERRY; printf "\n usbsub0, usbsub1 ...\n\n"; lsu' 
-alias usbadd1='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.1 && sleep 0.5; lsu'
-alias usbadd2='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.2 && sleep 0.5; lsu'
-alias usbadd3='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.3 && sleep 0.5; lsu'
-alias usbadd4='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.4 && sleep 0.5; lsu'
-alias usbsub0='lsu; sudo sudo usbip detach -p 0 # 00 && sleep 0.5; lsu'
-alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu'
-alias usbsub2='lsu; sudo sudo usbip detach -p 2 # 00 && sleep 0.5; lsu'
-alias usbsub3='lsu; sudo sudo usbip detach -p 3 # 00 && sleep 0.5; lsu'
+alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd2    |rnet|\n\n"; sudo usbip list -r $IP_RASPBERRY; printf "\n usbsub0, usbsub1 ...\n\n"; lsu -al' 
+alias usbadd1='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.1 && sleep 0.5; lsu -al'
+alias usbadd2='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.2 && sleep 0.5; lsu -al'
+alias usbadd3='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.3 && sleep 0.5; lsu -al'
+alias usbadd4='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.4 && sleep 0.5; lsu -al'
+alias usbsub0='lsu; sudo sudo usbip detach -p 0 # 00 && sleep 0.5; lsu -al'
+alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu -al'
+alias usbsub2='lsu; sudo sudo usbip detach -p 2 # 00 && sleep 0.5; lsu -al'
+alias usbsub3='lsu; sudo sudo usbip detach -p 3 # 00 && sleep 0.5; lsu -al'
 
+
+alias testmeter='/home/marcel/repower/yocto/build/workspace/sources/sm-apps/cmake-build-debug/SM_meter-reader/test/test_meter'
+alias testmeterls='echo "testmeter -c 00000000 -p rs485:1 -b 96007E1 -m 20160019 -t AS3000 -e com,auto"'
