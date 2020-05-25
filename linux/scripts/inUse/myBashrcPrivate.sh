@@ -36,7 +36,7 @@ alias tree='tree -C'
 
 alias mount='mount |column -t' 
 
-alias make='make -j4'
+alias m2='make -j12'
 
 alias grep='grep --color=auto'
 
@@ -51,12 +51,13 @@ alias redo='sudo $(history -p !!)'
 
 alias nano='nano -u --smooth --smarthome --const --autoindent'
 
+alias cod='code'
+
 alias lsblk='lsblk -f'
 
 alias myecho='$SCRIPT_DIR/myEcho.sh'
 
 alias team='/opt/teamviewer/tv_bin/TeamViewer &'
-alias cod='code'
 
 # confirmation #
 alias mv='mv -i' 

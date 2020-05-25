@@ -23,11 +23,12 @@ source ~/docker/dalias
 # alias
 # #####
 
-IP_SM="10.24.128.66"
+IP_SM="10.24.128.7"
 
 alias sshsmd='ssh -o StrictHostKeyChecking=no debuguser@$IP_SM'
 alias sshsmr='ssh -o StrictHostKeyChecking=no root@$IP_SM'
 alias sshsm='sshsmr'
+alias sshsmip='echo $IP_SM'
 alias sshsmwait='while ! sshsm
 					do
 					    echo "Trying again..."
@@ -61,15 +62,16 @@ alias sminit="
 
 
 IP_RASPBERRY="10.24.129.240"
-alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd2    |rnet|\n\n"; sudo usbip list -r $IP_RASPBERRY; printf "\n usbsub0, usbsub1 ...\n\n"; lsu -al' 
+alias usbaddls='printf "usbadd3    usbadd1    |Ethe|\nusbadd4    usbadd2    |rnet|\n\n"; printf "\n usbsub0, usbsub1 ...\n usbaddrb\n\n"; printf "1-1.1\nKamstrup    AIL256524    71488     33\n\n1-1.2\nE650    94772924\n\n1-1.3\nAS3000    20282563\nAS3500    20221311\nAS1440    251508\nAS1500    250707\n\n1-1.4\nE350     11261252\nAS1440     03548285\nAS3000     20215147\nEnsor    10000796\n\n"; sudo usbip list -r $IP_RASPBERRY; lsu -al' 
 alias usbadd1='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.1 && sleep 0.5; lsu -al'
 alias usbadd2='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.2 && sleep 0.5; lsu -al'
 alias usbadd3='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.3 && sleep 0.5; lsu -al'
 alias usbadd4='lsu; sudo usbip attach -r $IP_RASPBERRY -b 1-1.4 && sleep 0.5; lsu -al'
 alias usbsub0='lsu; sudo sudo usbip detach -p 0 # 00 && sleep 0.5; lsu -al'
-alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu -al'
+alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu -al'	
 alias usbsub2='lsu; sudo sudo usbip detach -p 2 # 00 && sleep 0.5; lsu -al'
 alias usbsub3='lsu; sudo sudo usbip detach -p 3 # 00 && sleep 0.5; lsu -al'
+alias usbaddrb="echo 'PW: raspberry'; ssh -t pi@$IP_RASPBERRY 'systemctl reboot'"
 
 
 alias testmeter='/home/marcel/repower/yocto/build/workspace/sources/sm-apps/cmake-build-debug/SM_meter-reader/test/test_meter'

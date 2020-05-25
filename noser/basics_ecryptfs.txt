@@ -26,7 +26,7 @@ http://dubeyko.com/development/FileSystems/eCryptfs/ecryptfs.pdf
 /////////////////
 https://wiki.archlinux.org/index.php/ECryptfs
 
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="sumo"/>
+<project name="meta-security" path="sources/meta-security" remote="yocto" revision="sumo"/>
 
 // create a new crypted folder
 ecryptfs-setup-private --nopwcheck --noautomount

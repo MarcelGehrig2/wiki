@@ -60,5 +60,5 @@ sudo apt-get -y install -y screen
 # sudo apt-get -y install default-jdk
 # sudo apt-get -y install openjfx
 
-sudo add-apt-repository ppa:webupd8team/java
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
+#sudo add-apt-repository ppa:webupd8team/java
+#apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886

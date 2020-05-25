@@ -7,7 +7,7 @@ chmod +x ../*/*.sh
 
 sudo apt-get update
 
-$script_dir/fixes.sh
+#$script_dir/fixes.sh
 $script_dir/toolchains.sh
 $script_dir/tools.sh
 $script_dir/gitPrivate.sh
