@@ -1,13 +1,12 @@
 sudo apt install apache2
 
 
+
 sudo /etc/init.d/apache2 reload
 
+
+
 sudo subl /etc/apache2/sites-available/000-default.conf
-
-
-
-
 
     Alias "/img/rpwr-ptd2" "/home/marcel/repower/yocto/build/deploy/images/rpwr-ptd2/"
     Alias "/img/rpwr-s2" "/home/marcel/repower/yocto/build/deploy/images/rpwr-s2/"
@@ -17,3 +16,7 @@ sudo subl /etc/apache2/sites-available/000-default.conf
         Options +Indexes
     </Directory>
 
+
+
+
+sudo /etc/init.d/apache2 reload

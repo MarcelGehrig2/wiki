@@ -1,6 +1,8 @@
 
 # durchsucht alle dateien mit der endung "_defconfig" nach dem Schlüsselwort "AM33"
 grep -r --include=*_defconfig "AM33" ./*
+grep -r "" ./*
+
 
 
 
