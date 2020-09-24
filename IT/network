@@ -1,0 +1,7 @@
+
+
+* Auto MDI-X: automatic cross/straight cable (for 100Mbit and smaller)
+* 100Mbit and smaller use 2 pairs -> 1 pair Tx, 1 pair Rx
+* 1Gbit uses 4 pairs
+  - 1000Base-TX: 4 pairs RX, 2 pairs Tx, CAT6
+  - 1000Base-T:  4 pairs, all Rx and Tx, CAT5e

@@ -71,8 +71,20 @@ alias usbsub0='lsu; sudo sudo usbip detach -p 0 # 00 && sleep 0.5; lsu -al'
 alias usbsub1='lsu; sudo sudo usbip detach -p 1 # 00 && sleep 0.5; lsu -al'	
 alias usbsub2='lsu; sudo sudo usbip detach -p 2 # 00 && sleep 0.5; lsu -al'
 alias usbsub3='lsu; sudo sudo usbip detach -p 3 # 00 && sleep 0.5; lsu -al'
-alias usbaddrb="echo 'PW: raspberry'; ssh -t pi@$IP_RASPBERRY 'systemctl reboot'"
+alias usbaddrb="echo 'PW: raspberry'; ssh -t pi@$IP_RASPBERRY 'sudo systemctl reboot'"
 
 
 alias testmeter='/home/marcel/repower/yocto/build/workspace/sources/sm-apps/cmake-build-debug/SM_meter-reader/test/test_meter'
 alias testmeterls='echo "testmeter -c 00000000 -p rs485:1 -b 96007E1 -m 20160019 -t AS3000 -e com,auto"'
+
+
+# copy to sm
+YOCTO_METAS_PATH="/home/marcel/repower/yoctoMetas"
+# /home/marcel/repower/yoctoMetas/build/tmp/work/rpwr_s2-phytec-linux-gnueabi/core-image-repower-debug-fit/1.0-r0/rootfs/usr/bin
+# /home/marcel/repower/yoctoMetas/build/tmp/work/cortexa7hf-neon-vfpv4-phytec-linux-gnueabi/sm-apps/1.0+git999-r0/package/usr/bin
+
+SM_METER_READER_PATH="$YOCTO_METAS_PATH/build/tmp/work/cortexa7hf-neon-vfpv4-phytec-linux-gnueabi/sm-apps/1.0+git999-r0/package/usr/bin/sm-meterreader"
+alias cpymr='scp -o StrictHostKeyChecking=no  $SM_METER_READER_PATH root@$IP_SM:/usr/bin'
+
+
+

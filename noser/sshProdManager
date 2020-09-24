@@ -15,5 +15,10 @@ scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.14
 
 // copy logs from SWCHSM.5.98
 scp -o StrictHostKeyChecking=no -i ~/.ssh/smartmanager_key debuguser@172.17.1.142:/tmp/rs485:*.log /tmp/
-  // copyLogSennwald.sh
+  
+  // copy from prod laptop
   scp -P 51122  smart_user@213.158.154.197:/tmp/rs485:*.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_smSennwald.log~
+  scp -P 51122  smart_user@213.158.154.197:/tmp/rs485:*.log /home/marcel/repower/notes/logs/$(date +"%Y%m%d_%H%M%S")_smGams:5.1.log
+
+
+

@@ -10,6 +10,7 @@ sudo subl /etc/apache2/sites-available/000-default.conf
 
     Alias "/img/rpwr-ptd2" "/home/marcel/repower/yocto/build/deploy/images/rpwr-ptd2/"
     Alias "/img/rpwr-s2" "/home/marcel/repower/yocto/build/deploy/images/rpwr-s2/"
+    Alias "/img/rpwr-s3" "/home/marcel/repower/yocto/build/deploy/images/rpwr-s3/"
 
     <Directory "/home/marcel/repower/yocto/build/deploy/images/">
         Require all granted
