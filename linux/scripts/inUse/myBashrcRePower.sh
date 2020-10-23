@@ -24,10 +24,15 @@ source ~/docker/dalias
 # #####
 
 IP_SM="10.24.128.7"
+IP_SM3="10.24.128.6"
+
 
 alias sshsmd='ssh -o StrictHostKeyChecking=no debuguser@$IP_SM'
 alias sshsmr='ssh -o StrictHostKeyChecking=no root@$IP_SM'
 alias sshsm='sshsmr'
+alias sshsmd3='ssh -o StrictHostKeyChecking=no debuguser@$IP_SM3'
+alias sshsmr3='ssh -o StrictHostKeyChecking=no root@$IP_SM3'
+alias sshsm3='sshsmr3'
 alias sshsmip='echo $IP_SM'
 alias sshsmwait='while ! sshsm
 					do
